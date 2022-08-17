@@ -1,0 +1,56 @@
+
+// Justify content
+$justify-or-align: (
+    'left': left,
+    'right': right,
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly,
+    'stretch': stretch
+);
+@each $key, $val in $justify-or-align {
+    .justify-content-#{$key}{
+        justify-content: $val;
+    }
+    .align-items-#{$key}{
+        align-items: $val;
+    }
+}
+
+// Flex Flow 
+$flex-flow: (
+    'prefix': 'flex',
+    'values': (
+        'row': row,
+        'column': column,
+    )
+);
+
+$prefix: map-get($flex-flow,'prefix');
+$flex-values: map-get($flex-flow, 'values');
+
+@each $key, $val in $flex-values {
+    .#{$prefix}-#{$key}{
+        flex-direction: $val;;
+    }
+}
+
+// Flex Wrap
+$flex-wrap: (
+    'prefix': 'flex',
+    'values': (
+        'wrap': wrap,
+        'nowrap': nowrap,
+    )
+);
+$prefix: map-get($flex-wrap,'prefix');
+$wrap-values: map-get($flex-wrap, 'values');
+
+@each $key, $val in $wrap-values {
+    .#{$prefix}-#{$key}{
+        flex-wrap: $val;;
+    }
+}

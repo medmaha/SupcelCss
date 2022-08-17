@@ -1,0 +1,77 @@
+
+$visions-displays: (
+    'display': (
+        'prefix': 'd',
+        'values': (
+            'flex': flex,
+            'grid': grid,
+            'inline': inline,
+            'inline-block': inline-block,
+            'block': block,
+            'none ': none,
+        )
+    ),
+    'opacity': (
+        prefix: 'o',
+        'values': (
+            0: 0,
+            10: .1,
+            20: .2,
+            30: .3,
+            40: .4,
+            50: .5,
+            60: .6,
+            70: .7,
+            80: .8,
+            90: .9,
+            100: 1
+        )
+    ),
+    'border-radius': (
+        'prefix': 'br',
+        'values': (
+            'none': 0,
+            'xs': .2rem,
+            'sm': .4rem,
+            'md': 1rem,
+            'lg': 2rem,
+            'full': 50%
+        )
+    ),
+
+    'font-size': (
+        'prefix': 'font',
+        'values': (
+            'xs':  $base-font-size * .35,
+            'sm':  $base-font-size * .65,
+            'md':  $base-font-size,
+            'lg':  $base-font-size * 2,
+            'xl':  $base-font-size * 2.8,
+            'xxl':  $base-font-size * 3.5
+        )
+    ),
+
+);
+
+@each $property, $map in $visions-displays {
+    $prefix: map-get($map, 'prefix');
+    $values: map-get($map, 'values');
+
+    @each $key, $val in $values{
+        .#{$prefix}-#{$key}{
+            #{$property}: $val !important;
+        }
+    }
+}
+
+
+// gap
+@for $idx from 1 through 10{
+    $val: $idx * 5;
+    .gap-#{$idx}-px{
+        gap: #{$val}+'px'
+    }
+    .gap-#{$idx}-rem{
+        gap: #{$idx}+'rem'
+    }
+}

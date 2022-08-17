@@ -1,0 +1,42 @@
+.card{
+    display: inline-block;
+    background-color: var(--card--color);
+    box-shadow: var(--base--box--shadow);
+    padding: $base-padding;
+    border-radius: .3rem;
+    width: 100%;
+
+    .card-title{
+        font-size: $base-font-size * 1.5;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        padding-bottom: $base-padding;
+        width: 100%;
+    }
+    .card-body{
+        padding: $base-padding $base-padding * .2;
+        overflow: hidden;
+        font-size: small;
+    }
+
+    .card-links{
+        padding: .5rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .link, a{
+            text-decoration: underline;
+            font-size: $base-font-size * .8;
+            color: rgb(3, 93, 93);
+            cursor: pointer;
+            margin: 0 .5rem;
+            transition: .4s ease-in-out;
+            &:hover{
+                text-decoration: none;
+                color: lighten($color: teal, $amount: 10%)
+            }
+        }
+    }
+
+}

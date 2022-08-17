@@ -1,0 +1,79 @@
+
+.text-center{
+    text-align: center;
+}
+
+// Hidding elements
+.hide{
+    display: none;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.profile-img-lg,
+.profile-img{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    img{
+        border-radius: 100%;
+        border: 1px solid var(--text--color);
+        width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+}
+
+.profile-img-lg{
+    width: 50px;
+    height: 50px;
+}
+
+// image responsive
+img.responsive{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+// Colors Depending On Theme Changes
+.bg-color{
+    background-color: var(--bg--color) !important;
+}
+.inverse-bg-color{
+    background-color: var(--text--color) !important;
+}
+.text-color{
+    fill: var(--text--color) !important;
+    color: var(--text--color) !important;
+}
+.light-text{
+    color: var(--light--text) !important;
+}
+.inverse-text-color{
+    color: var(--bg--color) !important;
+}
+
+// Special Classes
+.box-shadow{
+    box-shadow: var(--base--box--shadow);
+}
+
+.z-1{
+    z-index: 1
+}
+.z-1-plus{
+    z-index: 100
+}
+.z-minus-1{
+    z-index: -1
+}
+.z-minus-1-plus{
+    z-index: -100
+}

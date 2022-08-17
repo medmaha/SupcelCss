@@ -1,0 +1,90 @@
+// Color pallet
+@use'sass:math';
+
+@each $key, $val in $colors {
+    .#{$key}{
+        background-color: $val !important;
+    }
+    .#{$key}-text{
+        color: $val !important;
+    }
+    
+    @for $idx from 1 through 5 {
+        @if ($val != white){
+            $amount: $idx * 10%;
+            .#{$key}-text-lighten-#{$idx}{
+                color: lighten($val, $amount) !important;
+            }
+        }
+        @if ($val != black){
+            $amount: $idx * 10%;
+            .#{$key}-text-darken-#{$idx}{
+                color: darken($val, $amount) !important;
+            }
+        }
+    }
+    @for $idx from 1 through 5 {
+        @if ($val != white){
+            $amount: $idx * 10%;
+            .#{$key}-lighten-#{$idx}{
+                background-color: lighten($val, $amount) !important;
+            }
+        }
+        @if ($val != black){
+            $amount: $idx * 10%;
+            .#{$key}-darken-#{$idx}{
+                background-color: darken($val, $amount) !important;
+            }
+        }
+    }
+
+}
+
+// Hover Colors
+@each $key, $val in $colors{
+    .hover-#{$key}{
+        transition: background-color .4s;
+        &:hover{
+            background-color: $val !important;
+        }
+    }
+    .text-hover-#{$key}{
+        transition: color .4s;
+        &:hover{
+            color: $val !important;
+        }
+    }
+    @for $idx from 1 through 5{
+        @if ($val != white){
+            $amt: $idx * 5%;
+            .hover-#{$key}-lighten-#{$idx}{
+                transition: background-color .4s;
+                &:hover{
+                    background-color: lighten($color: $val, $amount: $amt) !important;
+                }
+            }
+            .text-hover-#{$key}-lighten-#{$idx}{
+                transition: color .4s;
+                &:hover{
+                    color: lighten($color: $val, $amount: $amt) !important;
+                }
+            }
+        }
+        @if ($val != black){
+            $amt: $idx * 5%;
+            .hover-#{$key}-lighten-#{$idx}{
+                transition: background-color .4s;
+                &:hover{
+                    background-color: darken($color: $val, $amount: $amt) !important;
+                }
+            }
+            .text-hover-#{$key}-darken-#{$idx}{
+                transition: color .4s;
+                &:hover{
+                    color: darken($color: $val, $amount: $amt) !important;
+                }
+            }
+        }
+    }
+}
+

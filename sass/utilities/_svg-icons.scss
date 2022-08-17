@@ -1,0 +1,45 @@
+svg{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    fill: var(--text--color)
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    svg{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.svg-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    svg{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+
+// icon coloring/filling
+@each $key, $val in $colors {
+    svg.#{$key}-icon{
+        fill: $val;
+        transition: fill .4s ease-in-out;
+    }
+    svg.#{$key}-on-hover{
+        &:hover{
+            fill: darken($color: $val, $amount: 10%);
+        }
+    }
+
+}
