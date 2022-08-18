@@ -21,11 +21,12 @@ $gaps-sizes: (
 }
 
 @for $idx from 1 through 5 {
+    $gap: $idx * .5;
     .row.gap-#{$idx}{
         margin: 0 -.3rem
     }
     .row.gap-#{$idx} > *{
-        padding: 0 $base-padding * .5
+        padding: 0 $base-padding * $gap
     }
 }
 //

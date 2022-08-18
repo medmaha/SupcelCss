@@ -25,6 +25,7 @@ $colors: (
     'primary': blue,
 );
 
+@import'theme_palattes/base';
 @import'border';
 @import'display';
 @import'flex-box';
@@ -34,4 +35,4 @@ $colors: (
 @import'spacing';
 @import'text-input';
 @import'svg-icons';
-@import'colors';
+// @import'colors';

@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--card--color);
+    background-color: transparent;
     cursor: pointer;
     svg{
         width: 1rem;
@@ -41,11 +41,11 @@ input[type=text]{
     padding: $base-padding * .5;
     border-radius: .25rem;
     color: var(--light--text);
-    border: 1px solid darken(teal, $amount: 3%);
+    border: 1px solid;
     background-color: transparent;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: border .15s ease-in-out;
     font-size:  $base-font-size;
+    @extend %inputBorderColor;
 }
 
 textarea{
@@ -59,22 +59,25 @@ input[type=email]:focus,
 input[type=url]:focus,
 input[type=search]:focus,
 input[type=text]:focus{
-    border: 1px solid lighten(teal, $amount: 10%);
-}
-
-
-input:disabled{
-    color: rgb(195, 195, 195);
-    cursor: no-drop;
-}
-input:disabled::placeholder{
-    color: rgb(206, 206, 206);
+    border-color: lighten(map-get($light-theme-colors, primaryColor), 20%) !important;
 }
 body.dark-mode{
-    input:disabled{
-        color: rgb(116, 114, 114);
+    input[type=password]:focus,
+    input[type=email]:focus,
+    input[type=url]:focus,
+    input[type=search]:focus,
+    input[type=text]:focus{
+        border-color: lighten(map-get($light-theme-colors, primaryColor), 20%) !important;
     }
-    input:disabled::placeholder{
-        color: rgb(98, 98, 98);
-    }
+}
+
+
+input::placeholder{
+    color: darken(#FFFFFF, 30%)
+}
+
+body.dark-mode {
+    input::placeholder{
+        color: darken(#FFFFFF, 50%) !important;
+    }  
 }

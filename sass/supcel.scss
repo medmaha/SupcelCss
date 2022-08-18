@@ -1,5 +1,6 @@
 // Variables
 @import'variable'; 
+@import'utilities/utils';
 
 
 // Grid and layout
@@ -7,11 +8,11 @@
 @import'grid/grid-columns';
 
 // Utilities
-@import'utilities/utils';
 
 // Componets
 @import'component/card';
 @import'component/button';
+
 @import'component/navbar';
 
 // Custom Utills

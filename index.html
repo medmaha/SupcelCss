@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supcel | Showcase</title>
+    <link rel="stylesheet" href="./css/supcel.css">
+</head>
+<body class="light-mode">
+
+    <nav class="">
+        <div class="container">
+
+            <div class="brand">
+                Supcell Css
+            </div>
+            
+            <form action="" class="search-bar">
+                    <input type="search", placeholder="Search supcel css...">
+            </form>
+            
+            <ul class="nav-links">
+                <li class="link">Home</li>
+                <li class="link">Contact</li>
+                <li class="link">About</li>
+                <li class="link" onclick="changeTheme()">Theme</li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="my-2 container">
+        <h1 class="text-center mb-1">
+            Welcome to Subcel Css
+        </h1>
+
+        <p class="text-center typography text-muted mx-5 br-sm p-1 mb-1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolorum ipsum quo aperiam impedit ipsa! Ab illo error necessitatibus dolor odio nisi, libero aperiam harum praesentium ad dicta distinctio doloribus laboriosam molestias ex id, quam laudantium commodi nemo quidem maxime sunt tempore vel. Nostrum beatae placeat dolor! Aut, ipsam explicabo.
+        </p>
+
+        <div class="d-flex justify-content-evenly my-1">
+            <div>
+                <span class="btn-small secondary">Button</span>
+            </div>
+            <div>
+                <button class="btn primary">Button 2</button>
+            </div>
+            <div>
+                <span class="btn-large theme-error">Button 3</span>
+            </div>
+        </div>
+        
+        <div class="row gap-5">
+            <div class="col-4-md">
+                <div class="card">
+                    <div class="card-header">
+                        Card 1
+                    </div>
+                    <div class="card-body typography">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quidem molestias placeat atque corporis nesciunt voluptas maxime nulla hic qui vel voluptatem culpa amet, ipsum, incidunt reprehenderit officiis, magnam perspiciatis ab! Sequi laudantium similique eius sapiente dicta maxime sint nemo necessitatibus quae eveniet aliquid facilis dolores, est unde! Suscipit, error?
+                    </div>
+                    <div class="card-links">
+                        <div class="link">Link 1</div>
+                        <div class="link">Link 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4-md">
+                <div class="card">
+                    <div class="card-header">
+                        Card 1
+                    </div>
+                    <div class="card-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quidem molestias placeat atque corporis nesciunt voluptas maxime nulla hic qui vel voluptatem culpa amet, ipsum, incidunt reprehenderit officiis, magnam perspiciatis ab! Sequi laudantium similique eius sapiente dicta maxime sint nemo necessitatibus quae eveniet aliquid facilis dolores, est unde! Suscipit, error?
+                    </div>
+                    <div class="card-links">
+                        <div class="link">Link 1</div>
+                        <div class="link">Link 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4-md">
+                <div class="card">
+                    <div class="card-header">
+                        Card 1
+                    </div>
+                    <div class="card-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quidem molestias placeat atque corporis nesciunt voluptas maxime nulla hic qui vel voluptatem culpa amet, ipsum, incidunt reprehenderit officiis, magnam perspiciatis ab! Sequi laudantium similique eius sapiente dicta maxime sint nemo necessitatibus quae eveniet aliquid facilis dolores, est unde! Suscipit, error?
+                    </div>
+                    <div class="card-links">
+                        <div class="link">Link 1</div>
+                        <div class="link">Link 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer>
+        function changeTheme(){
+            const body = document.body.classList
+            if (!body.contains('light-mode') && !body.contains('dark-mode')){
+                document.body.classList.add('dark-mode')
+                return
+            }
+            if (document.body.classList.contains('light-mode')){
+                document.body.classList.replace('light-mode', 'dark-mode')
+            }
+            else{
+                document.body.classList.replace('dark-mode', 'light-mode')
+            }
+        }
+    </script>
+</body>
+</html>

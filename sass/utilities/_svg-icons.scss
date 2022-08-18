@@ -2,7 +2,7 @@ svg{
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    fill: var(--text--color)
+    @extend %textColor
 }
 
 .icon-wrapper{

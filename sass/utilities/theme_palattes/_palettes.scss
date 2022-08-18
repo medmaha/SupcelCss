@@ -1,0 +1,26 @@
+
+$theme-colors: (
+    errorColor : #B00020,
+    successColor: #03b503,
+
+    light-mode: (
+        bgColor: #FCFAFA,
+        surfaceColor: #FFFFFF,
+        textColor: #212227,
+        textMuted: #555555,
+        primaryColor: #2B6D7A,
+        secondaryColor: #00A1E4
+    ),
+    dark-mode: (
+        bgColor: #04080F,
+        surfaceColor: lighten(#04080F, 3%),
+        textColor: darken(#EEEEEE, 10%),
+        textMuted: #999999,
+        primaryColor: lighten(#04080F, 25%),
+        secondaryColor: #B2E8F3
+    )
+);
+
+$light-theme-colors: map-get($theme-colors, light-mode);
+$dark-theme-colors: map-get($theme-colors, dark-mode);
+
