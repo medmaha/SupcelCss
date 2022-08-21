@@ -1,10 +1,11 @@
-.card{
-    @extend %surfaceCard;
+@mixin  card {
     display: inline-block;
     padding: $base-padding;
     border-radius: .3rem;
     width: 100%;
-
+    overflow: hidden;
+}
+@mixin card-title{
     .card-title{
         font-size: $base-font-size * 1.5;
         display: flex;
@@ -13,14 +14,17 @@
         padding-bottom: $base-padding;
         width: 100%;
     }
+}
+@mixin card-body {
     .card-body{
         padding: $base-padding $base-padding * .2;
         overflow: hidden;
         font-size: small;
     }
-
+}
+@mixin card-links{
     .card-links{
-        padding: .5rem 0;
+        padding: $base-padding * .25;
         width: 100%;
         display: flex;
         justify-content: right;
@@ -29,12 +33,29 @@
             margin: 0 .5rem;
             font-size: $base-font-size * .8;
             transition: all .2s linear;
-            @extend %secondaryText;
+            @extend %links;
             &:hover{
                 transform: scale(1.1);
                 opacity: .9;
             }
         }
     }
-
 }
+
+.flat-card{
+    @include card();
+    @include card-title();
+    @include card-body();
+    @include card-links();
+    @extend %surface  ; 
+}
+
+.card{
+    @include card();
+    @include card-title();
+    @include card-body();
+    @include card-links();
+    @extend %surfaceCard;
+}
+
+

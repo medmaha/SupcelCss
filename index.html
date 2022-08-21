@@ -7,14 +7,14 @@
     <title>Supcel | Showcase</title>
     <link rel="stylesheet" href="./css/supcel.css">
 </head>
-<body class="light-mode">
+<body class="">
 
     <nav class="">
         <div class="container">
 
-            <div class="brand">
+            <h1 class="brand">
                 Supcell Css
-            </div>
+            </h1>
             
             <form action="" class="search-bar">
                     <input type="search", placeholder="Search supcel css...">
@@ -30,29 +30,35 @@
     </nav>
     
     <section class="my-2 container">
-        <h1 class="text-center mb-1">
+        <h1 class="text-center mb-1 border">
             Welcome to Subcel Css
         </h1>
 
-        <p class="text-center typography text-muted mx-5 br-sm p-1 mb-1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolorum ipsum quo aperiam impedit ipsa! Ab illo error necessitatibus dolor odio nisi, libero aperiam harum praesentium ad dicta distinctio doloribus laboriosam molestias ex id, quam laudantium commodi nemo quidem maxime sunt tempore vel. Nostrum beatae placeat dolor! Aut, ipsam explicabo.
+        <p class="text-center typography text-muted mx-5 br-sm p-1 mb-1 info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, atque corporis! Vel laboriosam est aut dolores, molestias exercitationem culpa repudiandae odio ipsam reprehenderit consectetur placeat.
+        </p>
+        <p class="text-center mx-5 br-sm p-1 mb-1 success">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, atque corporis! Vel laboriosam est aut dolores, molestias exercitationem culpa repudiandae odio ipsam reprehenderit consectetur placeat.
+        </p>
+        <p class="text-center mx-5 br-sm p-1 mb-1 error">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, atque corporis! Vel laboriosam est aut dolores, molestias exercitationem culpa repudiandae odio ipsam reprehenderit consectetur placeat.
         </p>
 
         <div class="d-flex justify-content-evenly my-1">
             <div>
-                <span class="btn-small secondary">Button</span>
+                <span class="btn-small">Button</span>
             </div>
             <div>
-                <button class="btn primary">Button 2</button>
+                <button class="btn-primary">Button 2</button>
             </div>
             <div>
-                <span class="btn-large theme-error">Button 3</span>
+                <button class="btn-large btn-outline-primary">Button 3</button>
             </div>
         </div>
         
         <div class="row gap-5">
             <div class="col-4-md">
-                <div class="card">
+                <div class="card primary">
                     <div class="card-header">
                         Card 1
                     </div>
@@ -66,7 +72,7 @@
                 </div>
             </div>
             <div class="col-4-md">
-                <div class="card">
+                <div class="flat-card">
                     <div class="card-header">
                         Card 1
                     </div>
@@ -91,6 +97,20 @@
                         <div class="link">Link 1</div>
                         <div class="link">Link 2</div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog">
+            <div class="prompt">
+                <div class="title">Authentication Error</div>
+                <div class="content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, dolorem.
+                </div>
+                <div class="buttons">
+                    <div class="bttn">Ok</div>
+                    <div class="bttn" onClick="closeDialog()">Retry</div>
+                    <div class="bttn" onClick="closeDialog()">Cancel</div>
                 </div>
             </div>
         </div>
@@ -109,6 +129,13 @@
             else{
                 document.body.classList.replace('dark-mode', 'light-mode')
             }
+        }
+
+        function closeDialog() {
+            const dialog = document.querySelector('.dialog')
+
+            dialog.style.display = 'none'
+
         }
     </script>
 </body>

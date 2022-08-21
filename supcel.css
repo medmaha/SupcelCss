@@ -1,26 +1,26 @@
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  list-style: none;
-}
-
 body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 
+/*
+  6. Improve media defaults
+*/
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
+/*
+  7. Remove built-in form typography styles
+*/
 input, button, textarea, select {
   font: inherit;
 }
 
+/*
+  8. Avoid text overflows
+*/
 h1, h2, h3, h4, h5, h6 {
   color: #eee;
   overflow-wrap: break-word;
@@ -30,13 +30,29 @@ p {
   overflow-wrap: break-word;
 }
 
+/*
+  9. Create a root stacking context
+*/
 #root, #__next {
   isolation: isolate;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
 }
 
 body, body * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: all background-color 0.8s;
+}
+
+body, body * {
+  transition: background-color 0.7s linear;
 }
 
 .btn {
@@ -110,140 +126,7 @@ body, body * {
   max-width: 1.5rem !important;
 }
 
-body, body * {
-  transition: background-color 0.7s linear;
-}
-
-body {
-  --primary: teal;
-  --default--border--color: #999999;
-  color: #444444;
-  background-color: #dfdede;
-}
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #333333;
-}
-body nav .brand, nav body .brand, body svg, body .text-color,
-body .theme-text, body.dark-mode .btn-outline-primary, body.dark-mode .btn-primary, body.light-mode .btn-outline-primary, body.light-mode .btn-primary, body .btn-outline-primary, body .btn-primary, body .btn, body .btn-small, body .btn-large {
-  color: #444444 !important;
-  fill: #444444 !important;
-}
-body .dialog .prompt .content, .dialog .prompt body .content, body .text-muted, body textarea,
-body input[type=number],
-body input[type=password],
-body input[type=email],
-body input[type=url],
-body input[type=search],
-body input[type=text] {
-  color: #7b7a7a !important;
-  fill: #7b7a7a !important;
-}
-body nav .nav-links a svg:hover, nav .nav-links a body svg:hover, body nav .nav-links .link svg:hover, nav .nav-links .link body svg:hover, body nav .nav-links a:hover, nav .nav-links body a:hover, body nav .nav-links .link:hover, nav .nav-links body .link:hover,
-body nav .nav-links .link a:hover,
-nav .nav-links .link body a:hover, body .card .card-links .link, .card .card-links body .link, body .card .card-links a, .card .card-links body a, body .flat-card .card-links .link, .flat-card .card-links body .link, body .flat-card .card-links a, .flat-card .card-links body a, body .theme-link {
-  color: teal !important;
-  fill: teal !important;
-}
-body .theme-primary, body.dark-mode .btn-outline-primary:hover, body.dark-mode .btn-primary, body.light-mode .btn-outline-primary:hover, body.light-mode .btn-outline-primary:hover svg, body.light-mode .btn-primary, body .btn-outline-primary:hover, body .btn-outline-primary:hover svg, body .btn-primary {
-  color: #f6faff !important;
-  background: teal !important;
-}
-body .dialog .prompt .buttons .bttn:hover, .dialog .prompt .buttons body .bttn:hover {
-  background: #eeeeee !important;
-}
-body nav, body .flat-card {
-  background-color: white !important;
-}
-body .card, body .dialog .prompt, .dialog body .prompt {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: white !important;
-}
-body .btn-primary {
-  cursor: pointer;
-  margin: 0;
-  border: none;
-  outline: none;
-  display: flex;
-  gap: 1rem;
-  font-size: 1em;
-  align-items: center;
-  border-radius: 0.3rem;
-  text-transform: capitalize;
-  justify-content: space-between;
-  background-color: transparent;
-  transition: background-color 0.4s ease-in-out;
-  box-shadow: 0 0 2px rgb(0, 0, 0);
-  padding: 0.5rem 1rem;
-  opacity: 0.9;
-  transition: all 0.3s;
-}
-body .btn-primary:hover {
-  opacity: 0.9;
-}
-body .btn-primaryhover {
-  opacity: 1;
-}
-body .btn-primary svg {
-  fill: #fff;
-}
-body .btn-outline-primary {
-  cursor: pointer;
-  margin: 0;
-  border: none;
-  outline: none;
-  display: flex;
-  gap: 1rem;
-  font-size: 1em;
-  align-items: center;
-  border-radius: 0.3rem;
-  text-transform: capitalize;
-  justify-content: space-between;
-  background-color: transparent;
-  transition: background-color 0.4s ease-in-out;
-  box-shadow: 0 0 2px rgb(0, 0, 0);
-  padding: 0.5rem 1rem;
-  color: teal !important;
-  border: 1px solid teal !important;
-  transition: all 0.3s;
-}
-body .btn-outline-primary:hover {
-  opacity: 0.9;
-}
-body .btn-outline-primary svg {
-  transition: fill 0.3s;
-  fill: teal !important;
-  background: transparent !important;
-}
-body .btn-outline-primary:hover svg {
-  fill: #ffffff !important;
-}
-body .success {
-  color: white !important;
-  background: #52c852 !important;
-}
-body .error {
-  color: white !important;
-  background-color: #dd4a4a;
-}
-body .info {
-  color: #333333 !important;
-  background: #00b3b3;
-}
-body .hint-icon,
-body .hint-text {
-  fill: #00b3b3 !important;
-  color: #00b3b3 !important;
-  transition: color 0.25s;
-}
-body .hint-icon:hover,
-body .hint-text:hover {
-  fill: #003434;
-  color: #003434;
-}
-
 body.light-mode {
-  --primary: #00A1E4;
-  --default--border--color: #888888 !important;
   color: #444444;
   background-image: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6);
 }
@@ -252,16 +135,13 @@ body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4, 
 }
 body.light-mode nav .brand, nav body.light-mode .brand, body.light-mode svg, body.light-mode .text-color,
 body.light-mode .theme-text, body.light-mode .btn-outline-primary, body.light-mode .btn-primary, body.light-mode .btn, body.light-mode .btn-small, body.light-mode .btn-large {
-  color: #444444 !important;
-  fill: #444444 !important;
+  color: #444444;
 }
 body.light-mode .theme-text-dark {
   color: #111111 !important;
-  fill: #111111 !important;
 }
 body.light-mode .theme-text-dark {
   color: #777777 !important;
-  fill: #777777 !important;
 }
 body.light-mode .dialog .prompt .content, .dialog .prompt body.light-mode .content, body.light-mode .text-muted, body.light-mode textarea,
 body.light-mode input[type=number],
@@ -271,13 +151,12 @@ body.light-mode input[type=url],
 body.light-mode input[type=search],
 body.light-mode input[type=text] {
   color: #888888 !important;
-  fill: #888888 !important;
 }
 body.light-mode nav .nav-links a svg:hover, nav .nav-links a body.light-mode svg:hover, body.light-mode nav .nav-links .link svg:hover, nav .nav-links .link body.light-mode svg:hover, body.light-mode nav .nav-links a:hover, nav .nav-links body.light-mode a:hover, body.light-mode nav .nav-links .link:hover, nav .nav-links body.light-mode .link:hover, body.light-mode .card .card-links .link, .card .card-links body.light-mode .link, body.light-mode .card .card-links a, .card .card-links body.light-mode a, body.light-mode .flat-card .card-links .link, .flat-card .card-links body.light-mode .link, body.light-mode .flat-card .card-links a, .flat-card .card-links body.light-mode a, body.light-mode .theme-link {
   color: #00A1E4 !important;
   fill: #00A1E4 !important;
 }
-body.light-mode .theme-primary, body.light-mode .btn-outline-primary:hover, body.light-mode .btn-outline-primary:hover svg, body.light-mode .btn-primary {
+body.light-mode .theme-primary, body.light-mode .btn-outline-primary:hover, body.light-mode .btn-primary {
   color: #f6faff !important;
   background: #00A1E4 !important;
 }
@@ -325,17 +204,9 @@ body.light-mode .btn-primary {
   transition: background-color 0.4s ease-in-out;
   box-shadow: 0 0 2px rgb(0, 0, 0);
   padding: 0.5rem 1rem;
-  opacity: 0.9;
-  transition: all 0.3s;
 }
 body.light-mode .btn-primary:hover {
   opacity: 0.9;
-}
-body.light-mode .btn-primaryhover {
-  opacity: 1;
-}
-body.light-mode .btn-primary svg {
-  fill: #fff;
 }
 body.light-mode .btn-outline-primary {
   cursor: pointer;
@@ -360,15 +231,6 @@ body.light-mode .btn-outline-primary {
 body.light-mode .btn-outline-primary:hover {
   opacity: 0.9;
 }
-body.light-mode .btn-outline-primary svg {
-  transition: fill 0.3s;
-  fill: #00A1E4 !important;
-  background: transparent !important;
-}
-body.light-mode .btn-outline-primary:hover svg {
-  background: transparent !important;
-  fill: #ffffff !important;
-}
 body.light-mode .success {
   color: #f2f2f2 !important;
   background: #0fa00f !important;
@@ -377,26 +239,12 @@ body.light-mode .error {
   color: #f2f2f2 !important;
   background-color: #e02828;
 }
-body.light-mode .hint-icon,
-body.light-mode .hint-text {
-  fill: #4bcaff !important;
-  color: #4bcaff !important;
-  transition: color 0.25s;
-}
-body.light-mode .hint-icon:hover,
-body.light-mode .hint-text:hover {
-  fill: #b1e8ff !important;
-  color: #b1e8ff !important;
-}
-body.light-mode .hint,
 body.light-mode .info {
   color: #333333 !important;
   background: #4bcaff !important;
 }
 
 body.dark-mode {
-  --primary: #28878a;
-  --default--border--color: #6a6969 !important;
   color: #cbc9c9;
   background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);
 }
@@ -405,16 +253,13 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 }
 body.dark-mode nav .brand, nav body.dark-mode .brand, body.dark-mode svg, body.dark-mode .text-color,
 body.dark-mode .theme-text, body.dark-mode .btn-outline-primary, body.dark-mode .btn-primary, body.dark-mode .btn, body.dark-mode .btn-small, body.dark-mode .btn-large {
-  color: #cbc9c9 !important;
-  fill: #cbc9c9 !important;
+  color: #cbc9c9;
 }
 body.dark-mode .theme-text-dark {
   color: #999595 !important;
-  fill: #999595 !important;
 }
 body.dark-mode .theme-text-dark {
   color: #fdfdfd !important;
-  fill: #fdfdfd !important;
 }
 body.dark-mode .dialog .prompt .content, .dialog .prompt body.dark-mode .content, body.dark-mode .text-muted, body.dark-mode textarea,
 body.dark-mode input[type=number],
@@ -424,13 +269,12 @@ body.dark-mode input[type=url],
 body.dark-mode input[type=search],
 body.dark-mode input[type=text] {
   color: #6a6969 !important;
-  fill: #6a6969 !important;
 }
 body.dark-mode nav .nav-links a svg:hover, nav .nav-links a body.dark-mode svg:hover, body.dark-mode nav .nav-links .link svg:hover, nav .nav-links .link body.dark-mode svg:hover, body.dark-mode nav .nav-links a:hover, nav .nav-links body.dark-mode a:hover, body.dark-mode nav .nav-links .link:hover, nav .nav-links body.dark-mode .link:hover, body.dark-mode .card .card-links .link, .card .card-links body.dark-mode .link, body.dark-mode .card .card-links a, .card .card-links body.dark-mode a, body.dark-mode .flat-card .card-links .link, .flat-card .card-links body.dark-mode .link, body.dark-mode .flat-card .card-links a, .flat-card .card-links body.dark-mode a, body.dark-mode .theme-link {
   color: #28878a !important;
   fill: #28878a !important;
 }
-body.dark-mode .theme-primary, body.dark-mode .btn-outline-primary:hover, body.dark-mode .btn-primary, body.dark-mode .btn-outline-primary:hover svg, body.light-mode .btn-outline-primary:hover body.dark-mode svg {
+body.dark-mode .theme-primary, body.dark-mode .btn-outline-primary:hover, body.dark-mode .btn-primary {
   color: #f6faff !important;
   background: #28878a !important;
 }
@@ -478,17 +322,9 @@ body.dark-mode .btn-primary {
   transition: background-color 0.4s ease-in-out;
   box-shadow: 0 0 2px rgb(0, 0, 0);
   padding: 0.5rem 1rem;
-  opacity: 0.9;
-  transition: all 0.3s;
 }
 body.dark-mode .btn-primary:hover {
   opacity: 0.9;
-}
-body.dark-mode .btn-primaryhover {
-  opacity: 1;
-}
-body.dark-mode .btn-primary svg {
-  fill: #fff !important;
 }
 body.dark-mode .btn-outline-primary {
   cursor: pointer;
@@ -513,15 +349,6 @@ body.dark-mode .btn-outline-primary {
 body.dark-mode .btn-outline-primary:hover {
   opacity: 0.9;
 }
-body.dark-mode .btn-outline-primary svg {
-  transition: fill 0.3s;
-  fill: #28878a !important;
-  background: transparent !important;
-}
-body.dark-mode .btn-outline-primary:hover svg {
-  fill: #f6faff !important;
-  background: transparent !important;
-}
 body.dark-mode .success {
   color: #cbc9c9 !important;
   background: #0f800f !important;
@@ -530,20 +357,105 @@ body.dark-mode .error {
   color: #cbc9c9 !important;
   background-color: #c52222;
 }
-body.dark-mode .hint-icon,
-body.dark-mode .hint-text {
-  fill: #39c1c5 !important;
-  color: #39c1c5 !important;
-  transition: color 0.25s;
-}
-body.dark-mode .hint-icon:hover,
-body.dark-mode .hint-text:hover {
-  fill: #88dadd !important;
-  color: #88dadd !important;
-}
 body.dark-mode .info {
   color: #333333 !important;
   background: #39c1c5 !important;
+}
+
+body {
+  color: #444444;
+  background-color: #dfdede;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #333333;
+}
+body nav .brand, nav body .brand, body svg, body .text-color,
+body .theme-text, body .btn-outline-primary, body .btn-primary, body .btn, body .btn-small, body .btn-large, body.light-mode .btn-primary, body.light-mode .btn-outline-primary, body.dark-mode .btn-primary, body.dark-mode .btn-outline-primary {
+  color: #444444;
+}
+body .dialog .prompt .content, .dialog .prompt body .content, body .text-muted, body textarea,
+body input[type=number],
+body input[type=password],
+body input[type=email],
+body input[type=url],
+body input[type=search],
+body input[type=text] {
+  color: #999999 !important;
+}
+body nav .nav-links a svg:hover, nav .nav-links a body svg:hover, body nav .nav-links .link svg:hover, nav .nav-links .link body svg:hover, body nav .nav-links a:hover, nav .nav-links body a:hover, body nav .nav-links .link:hover, nav .nav-links body .link:hover,
+body nav .nav-links .link a:hover,
+nav .nav-links .link body a:hover, body .card .card-links .link, .card .card-links body .link, body .card .card-links a, .card .card-links body a, body .flat-card .card-links .link, .flat-card .card-links body .link, body .flat-card .card-links a, .flat-card .card-links body a, body .theme-link {
+  color: teal !important;
+  fill: teal !important;
+}
+body .theme-primary, body .btn-outline-primary:hover, body .btn-primary, body.light-mode .btn-primary, body.light-mode .btn-outline-primary:hover, body.dark-mode .btn-primary, body.dark-mode .btn-outline-primary:hover {
+  color: #f6faff !important;
+  background: teal !important;
+}
+body .dialog .prompt .buttons .bttn:hover, .dialog .prompt .buttons body .bttn:hover {
+  background: #eeeeee !important;
+}
+body nav, body .flat-card {
+  background-color: white !important;
+}
+body .card, body .dialog .prompt, .dialog body .prompt {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white !important;
+}
+body .btn-primary {
+  cursor: pointer;
+  margin: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 1em;
+  align-items: center;
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  justify-content: space-between;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+}
+body .btn-primary:hover {
+  opacity: 0.9;
+}
+body .btn-outline-primary {
+  cursor: pointer;
+  margin: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 1em;
+  align-items: center;
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  justify-content: space-between;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  color: teal !important;
+  border: 1px solid teal !important;
+  transition: all 0.3s;
+}
+body .btn-outline-primary:hover {
+  opacity: 0.9;
+}
+body .success {
+  color: white !important;
+  background: #52c852 !important;
+}
+body .error {
+  color: white !important;
+  background-color: #dd4a4a;
+}
+body .info {
+  color: #333333 !important;
+  background: #00b3b3;
 }
 
 .typography {
@@ -3291,247 +3203,247 @@ body.dark-mode input::placeholder {
 }
 
 .border {
-  border: 0.5px solid var(--default--border--color);
+  border: 0.5px solid var(--text--color);
 }
 
 .border-1 {
-  border: 1px solid var(--default--border--color);
+  border: 1px solid var(--text--color);
 }
 
 .border-2 {
-  border: 2px solid var(--default--border--color);
+  border: 2px solid var(--text--color);
 }
 
 .border-3 {
-  border: 3px solid var(--default--border--color);
+  border: 3px solid var(--text--color);
 }
 
 .border-4 {
-  border: 4px solid var(--default--border--color);
+  border: 4px solid var(--text--color);
 }
 
 .border-5 {
-  border: 5px solid var(--default--border--color);
+  border: 5px solid var(--text--color);
 }
 
 .border-6 {
-  border: 6px solid var(--default--border--color);
+  border: 6px solid var(--text--color);
 }
 
 .border-7 {
-  border: 7px solid var(--default--border--color);
+  border: 7px solid var(--text--color);
 }
 
 .border-8 {
-  border: 8px solid var(--default--border--color);
+  border: 8px solid var(--text--color);
 }
 
 .border-9 {
-  border: 9px solid var(--default--border--color);
+  border: 9px solid var(--text--color);
 }
 
 .border-10 {
-  border: 10px solid var(--default--border--color);
+  border: 10px solid var(--text--color);
 }
 
 .border-top-1 {
   border: none;
-  border-top: 1px solid var(--default--border--color) !important;
+  border-top: 1px solid var(--text--color) !important;
 }
 
 .border-top-2 {
   border: none;
-  border-top: 2px solid var(--default--border--color) !important;
+  border-top: 2px solid var(--text--color) !important;
 }
 
 .border-top-3 {
   border: none;
-  border-top: 3px solid var(--default--border--color) !important;
+  border-top: 3px solid var(--text--color) !important;
 }
 
 .border-top-4 {
   border: none;
-  border-top: 4px solid var(--default--border--color) !important;
+  border-top: 4px solid var(--text--color) !important;
 }
 
 .border-top-5 {
   border: none;
-  border-top: 5px solid var(--default--border--color) !important;
+  border-top: 5px solid var(--text--color) !important;
 }
 
 .border-top-6 {
   border: none;
-  border-top: 6px solid var(--default--border--color) !important;
+  border-top: 6px solid var(--text--color) !important;
 }
 
 .border-top-7 {
   border: none;
-  border-top: 7px solid var(--default--border--color) !important;
+  border-top: 7px solid var(--text--color) !important;
 }
 
 .border-top-8 {
   border: none;
-  border-top: 8px solid var(--default--border--color) !important;
+  border-top: 8px solid var(--text--color) !important;
 }
 
 .border-top-9 {
   border: none;
-  border-top: 9px solid var(--default--border--color) !important;
+  border-top: 9px solid var(--text--color) !important;
 }
 
 .border-top-10 {
   border: none;
-  border-top: 10px solid var(--default--border--color) !important;
+  border-top: 10px solid var(--text--color) !important;
 }
 
 .border-left-1 {
   border: none;
-  border-left: 1px solid var(--default--border--color) !important;
+  border-left: 1px solid var(--text--color) !important;
 }
 
 .border-left-2 {
   border: none;
-  border-left: 2px solid var(--default--border--color) !important;
+  border-left: 2px solid var(--text--color) !important;
 }
 
 .border-left-3 {
   border: none;
-  border-left: 3px solid var(--default--border--color) !important;
+  border-left: 3px solid var(--text--color) !important;
 }
 
 .border-left-4 {
   border: none;
-  border-left: 4px solid var(--default--border--color) !important;
+  border-left: 4px solid var(--text--color) !important;
 }
 
 .border-left-5 {
   border: none;
-  border-left: 5px solid var(--default--border--color) !important;
+  border-left: 5px solid var(--text--color) !important;
 }
 
 .border-left-6 {
   border: none;
-  border-left: 6px solid var(--default--border--color) !important;
+  border-left: 6px solid var(--text--color) !important;
 }
 
 .border-left-7 {
   border: none;
-  border-left: 7px solid var(--default--border--color) !important;
+  border-left: 7px solid var(--text--color) !important;
 }
 
 .border-left-8 {
   border: none;
-  border-left: 8px solid var(--default--border--color) !important;
+  border-left: 8px solid var(--text--color) !important;
 }
 
 .border-left-9 {
   border: none;
-  border-left: 9px solid var(--default--border--color) !important;
+  border-left: 9px solid var(--text--color) !important;
 }
 
 .border-left-10 {
   border: none;
-  border-left: 10px solid var(--default--border--color) !important;
+  border-left: 10px solid var(--text--color) !important;
 }
 
 .border-right-1 {
   border: none;
-  border-right: 1px solid var(--default--border--color) !important;
+  border-right: 1px solid var(--text--color) !important;
 }
 
 .border-right-2 {
   border: none;
-  border-right: 2px solid var(--default--border--color) !important;
+  border-right: 2px solid var(--text--color) !important;
 }
 
 .border-right-3 {
   border: none;
-  border-right: 3px solid var(--default--border--color) !important;
+  border-right: 3px solid var(--text--color) !important;
 }
 
 .border-right-4 {
   border: none;
-  border-right: 4px solid var(--default--border--color) !important;
+  border-right: 4px solid var(--text--color) !important;
 }
 
 .border-right-5 {
   border: none;
-  border-right: 5px solid var(--default--border--color) !important;
+  border-right: 5px solid var(--text--color) !important;
 }
 
 .border-right-6 {
   border: none;
-  border-right: 6px solid var(--default--border--color) !important;
+  border-right: 6px solid var(--text--color) !important;
 }
 
 .border-right-7 {
   border: none;
-  border-right: 7px solid var(--default--border--color) !important;
+  border-right: 7px solid var(--text--color) !important;
 }
 
 .border-right-8 {
   border: none;
-  border-right: 8px solid var(--default--border--color) !important;
+  border-right: 8px solid var(--text--color) !important;
 }
 
 .border-right-9 {
   border: none;
-  border-right: 9px solid var(--default--border--color) !important;
+  border-right: 9px solid var(--text--color) !important;
 }
 
 .border-right-10 {
   border: none;
-  border-right: 10px solid var(--default--border--color) !important;
+  border-right: 10px solid var(--text--color) !important;
 }
 
 .border-bottom-1 {
   border: none;
-  border-bottom: 1px solid var(--default--border--color) !important;
+  border-bottom: 1px solid var(--text--color) !important;
 }
 
 .border-bottom-2 {
   border: none;
-  border-bottom: 2px solid var(--default--border--color) !important;
+  border-bottom: 2px solid var(--text--color) !important;
 }
 
 .border-bottom-3 {
   border: none;
-  border-bottom: 3px solid var(--default--border--color) !important;
+  border-bottom: 3px solid var(--text--color) !important;
 }
 
 .border-bottom-4 {
   border: none;
-  border-bottom: 4px solid var(--default--border--color) !important;
+  border-bottom: 4px solid var(--text--color) !important;
 }
 
 .border-bottom-5 {
   border: none;
-  border-bottom: 5px solid var(--default--border--color) !important;
+  border-bottom: 5px solid var(--text--color) !important;
 }
 
 .border-bottom-6 {
   border: none;
-  border-bottom: 6px solid var(--default--border--color) !important;
+  border-bottom: 6px solid var(--text--color) !important;
 }
 
 .border-bottom-7 {
   border: none;
-  border-bottom: 7px solid var(--default--border--color) !important;
+  border-bottom: 7px solid var(--text--color) !important;
 }
 
 .border-bottom-8 {
   border: none;
-  border-bottom: 8px solid var(--default--border--color) !important;
+  border-bottom: 8px solid var(--text--color) !important;
 }
 
 .border-bottom-9 {
   border: none;
-  border-bottom: 9px solid var(--default--border--color) !important;
+  border-bottom: 9px solid var(--text--color) !important;
 }
 
 .border-bottom-10 {
   border: none;
-  border-bottom: 10px solid var(--default--border--color) !important;
+  border-bottom: 10px solid var(--text--color) !important;
 }
 
 .border-style-dashed {
@@ -3615,6 +3527,7 @@ body.dark-mode input::placeholder {
 }
 
 svg {
+  display: inline-block;
   width: 1rem;
   height: 1rem;
 }
@@ -3627,7 +3540,6 @@ svg {
   height: 1.1rem;
 }
 .icon-wrapper svg {
-  display: inline-block;
   width: 100% !important;
   height: 100% !important;
 }
@@ -3649,7 +3561,7 @@ svg.white-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-white:hover {
+svg.white-on-hover:hover {
   fill: #e6e6e6;
 }
 
@@ -3658,7 +3570,7 @@ svg.black-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-black:hover {
+svg.black-on-hover:hover {
   fill: black;
 }
 
@@ -3667,7 +3579,7 @@ svg.red-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-red:hover {
+svg.red-on-hover:hover {
   fill: #cc0000;
 }
 
@@ -3676,7 +3588,7 @@ svg.blue-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-blue:hover {
+svg.blue-on-hover:hover {
   fill: #0000cc;
 }
 
@@ -3685,7 +3597,7 @@ svg.green-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-green:hover {
+svg.green-on-hover:hover {
   fill: #015d01;
 }
 
@@ -3694,7 +3606,7 @@ svg.yellow-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-yellow:hover {
+svg.yellow-on-hover:hover {
   fill: #cccc00;
 }
 
@@ -3703,7 +3615,7 @@ svg.orange-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-orange:hover {
+svg.orange-on-hover:hover {
   fill: #cc8400;
 }
 
@@ -3712,7 +3624,7 @@ svg.pink-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-pink:hover {
+svg.pink-on-hover:hover {
   fill: #ff4767;
 }
 
@@ -3721,7 +3633,7 @@ svg.brown-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-brown:hover {
+svg.brown-on-hover:hover {
   fill: #7c2020;
 }
 
@@ -3730,7 +3642,7 @@ svg.grey-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-grey:hover {
+svg.grey-on-hover:hover {
   fill: #505050;
 }
 
@@ -3739,7 +3651,7 @@ svg.violet-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-violet:hover {
+svg.violet-on-hover:hover {
   fill: #e855e8;
 }
 
@@ -3748,7 +3660,7 @@ svg.purple-icon {
   transition: fill 0.4s ease-in-out;
 }
 
-svg.on-hover-purple:hover {
+svg.purple-on-hover:hover {
   fill: #4d004d;
 }
 

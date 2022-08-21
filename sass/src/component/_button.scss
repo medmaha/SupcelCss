@@ -12,7 +12,7 @@
     justify-content: space-between;
     background-color: transparent;
     transition: background-color .4s ease-in-out;
-    box-shadow: 0 0 2px rgba(0,0,0.05);
+    box-shadow: 0 0 2px rgba(0,0,0.2);
     padding: $base-padding * .5 $base-padding;
 
     &:hover{
@@ -41,24 +41,26 @@
     }
 }
 
-@each $key, $value in $colors {
-    .btn-#{$key}{
-        @include btn($value);
-        gap: .8rem;
 
-        &:hover{
-            background-color: darken($color: $value, $amount: 10%);
-        }
-    }
 
-    .btn-outline-#{$key}{
-        @include btn;
-        gap: .5rem;
-        border: $base-border-size solid $value;
-        color: $value;
-        &:hover{
-            color: white;
-            background-color: $value;
-        }
-    }
-}
+// @each $key, $value in $colors {
+//     .btn-#{$key}{
+//         @include btn($value);
+//         gap: .8rem;
+
+//         &:hover{
+//             background-color: darken($color: $value, $amount: 10%);
+//         }
+//     }
+
+//     .btn-outline-#{$key}{
+//         @include btn;
+//         gap: .5rem;
+//         border: $base-border-size solid $value;
+//         color: $value;
+//         &:hover{
+//             color: white;
+//             background-color: $value;
+//         }
+//     }
+// }

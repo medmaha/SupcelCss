@@ -1,0 +1,43 @@
+
+// ======================================= TEXTS ==============================================
+
+
+.text-color,
+.theme-text{
+    @extend %textColor;
+}
+
+.theme-text-dark{
+    @extend %textColorDark;
+}
+
+.theme-text-dark{
+    @extend %textColorLight;
+}
+
+.theme-link{
+    @extend %links;
+}
+
+.text-muted{
+    @extend %textMutedColor;
+}
+
+.typography{
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 16px;
+    overflow-wrap: break-word;
+}
+
+
+// ========================================== UI =============================================
+.theme-primary{
+    @extend %primaryColor;
+}
+.theme-primary-dark{
+    @extend %primaryColorDark;
+}
+.theme-primary-light{
+    @extend %primaryColorLight;
+}

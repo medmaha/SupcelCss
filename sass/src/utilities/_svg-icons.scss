@@ -1,8 +1,7 @@
 svg{
-    display: inline-block;
     width: 1rem;
     height: 1rem;
-    @extend %textColor
+    @extend %textColor;
 }
 
 .icon-wrapper{
@@ -12,6 +11,7 @@ svg{
     width: 1.1rem;
     height: 1.1rem;
     svg{
+        display: inline-block;
         width: 100% !important;
         height: 100% !important;
     }
@@ -36,7 +36,7 @@ svg{
         fill: $val;
         transition: fill .4s ease-in-out;
     }
-    svg.#{$key}-on-hover{
+    svg.on-hover-#{$key}{
         &:hover{
             fill: darken($color: $val, $amount: 10%);
         }

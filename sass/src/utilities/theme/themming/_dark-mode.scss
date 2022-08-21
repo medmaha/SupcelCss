@@ -1,0 +1,146 @@
+
+body.dark-mode{
+    $textColor: map-get($dark-theme-colors, textColor);
+    $textColor-dark: darken($textColor, 20%);
+    $textColor-light: lighten($textColor, 20%);
+    
+    $textMutedColor: map-get($dark-theme-colors, textMuted);
+    
+    $primaryColor: map-get($dark-theme-colors, primaryColor);
+    $primaryColor-dark: darken($primaryColor, 20%);
+    $primaryColor-light: lighten($primaryColor, 15%);
+
+    --primary: #28878a;
+    --default--border--color: #6a6969 !important;
+
+    h1, h2, h3, h4, h5, h6 {color: #eee}
+
+    color: map-get($dark-theme-colors, textColor );
+    background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);  	
+    
+    
+    // ===========================================   TEXTS   ========================================================//
+
+        %textColor{
+            color: $textColor !important;
+            fill: $textColor !important;
+        }
+        %textColorDark{
+            color: $textColor-dark !important;
+            fill: $textColor-dark !important;
+            
+        }
+        %textColorLight{
+            color: $textColor-light !important;
+            fill: $textColor-light !important;
+        }
+
+        %textMutedColor{
+            color: $textMutedColor !important;
+            fill: $textMutedColor !important;
+        }
+        %links{
+            color: $primaryColor !important;
+            fill: $primaryColor !important;
+        }
+
+    
+    // ===============================================   UI    ================================================================//
+        
+        %primaryColor{
+            color: #f6faff !important;
+            background: $primaryColor !important;
+        }
+        %primaryColorDark{
+            color: #f6faff !important;
+            background: $primaryColor-dark !important;
+        }
+        %primaryColorLight{
+            color: darken(#f6faff, 10%) !important;
+            background: $primaryColor-light !important;
+        }
+    
+        %bgColor{
+            color: map-get($dark-theme-colors, textColor );
+            background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);  	
+        }
+
+        %inputBorderColor{
+            border-color: darken(map-get($dark-theme-colors, textMuted), 20%);
+        }
+
+        %surface{
+            background-image: linear-gradient(to left top, #021f39, #02203a, #02213c, #01223d, #01233f, #01223e, #01223e, #01213d, #011f3a, #011d36, #011c33, #011a30);
+        }
+
+        %surfaceCard{
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-image: linear-gradient(to left top, #021f39, #02203a, #02213c, #01223d, #01233f, #01223e, #01223e, #01213d, #011f3a, #011d36, #011c33, #011a30);
+        }
+
+
+
+    // ====================================== CLASSES =========================================================//
+
+    .btn-primary{
+        @include btn;
+        @extend %primaryColor;
+        opacity:  .9;
+        transition: all .3s;
+
+        &hover{
+            opacity: 1;
+        }
+        svg{
+            fill:  #fff !important;;
+        }
+    }
+
+    .btn-outline-primary{
+        @include btn;
+        color: $primaryColor !important;
+        border: 1px solid $primaryColor !important;
+        transition:  all .3s;
+        
+        svg{
+            transition:  fill .3s;
+            fill: $primaryColor !important;
+            background: transparent !important;
+        }
+        
+        &:hover{
+            @extend %primaryColor;
+        }
+        &:hover svg{
+            fill: #f6faff !important;            
+            background: transparent !important;
+        }
+
+    }
+
+        .success{
+            color: $textColor !important;
+            background: #0f800f !important;
+        }
+
+        .error{
+            color: $textColor !important;
+            background-color: #c52222;
+        }
+
+    .hint-icon,
+    .hint-text{
+        fill: $primaryColor-light !important;
+        color: $primaryColor-light !important;
+        transition: color .25s;
+        &:hover{
+            fill: lighten($primaryColor-light, 20%) !important;
+            color: lighten($primaryColor-light, 20%) !important;
+        }
+    }
+
+        .info{
+            color: #333333 !important;
+            background: $primaryColor-light !important;
+        }
+}

@@ -1,10 +1,10 @@
 {
-  "name": "supcel-sass",
+  "name": "supcel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "start": "gulp"
   },
   "keywords": [],
   "author": "",

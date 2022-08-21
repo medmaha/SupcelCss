@@ -1,18 +1,17 @@
 // Variables
+@import'resetsheet'; 
 @import'variable'; 
-@import'utilities/utils';
 
+// Utilities
+@import'utilities/utils';
 
 // Grid and layout
 @import'grid/breakpoint';
 @import'grid/grid-columns';
 
-// Utilities
-
 // Componets
 @import'component/card';
 @import'component/button';
-
 @import'component/navbar';
 
 // Custom Utills

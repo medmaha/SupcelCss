@@ -1,0 +1,118 @@
+
+
+body{
+    $primaryColor: teal;
+    $textColor: #444444;
+    $textMutedColor: #7b7a7a;
+
+    --primary: teal;
+    --default--border--color: #999999;
+
+    h1, h2, h3, h4, h5, h6 {color: #333333}
+
+    color: $textColor;
+    background-color: #dfdede;
+    
+    // ===========================================   TEXTS   ========================================================//
+
+        %textColor{
+            color: $textColor !important;
+            fill: $textColor !important;;
+        }
+        %textMutedColor{
+            color: $textMutedColor !important;
+            fill: $textMutedColor !important;
+        }
+        %links{
+            color: $primaryColor !important;
+            fill: $primaryColor !important;
+        }
+    
+    // ===============================================   UI    ================================================================//
+        
+        %primaryColor{
+            color: #f6faff !important;
+            background: $primaryColor !important;
+        }
+    
+        %bgColor{
+            background: #eeeeee !important;
+        }
+
+        %inputBorderColor{
+            @extend %textMutedColor
+        }
+
+        %surface{
+            background-color: white !important;
+        }
+
+        %surfaceCard{
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: white !important;
+        }
+
+
+
+    // ====================================== CLASSES =========================================================//
+
+    .btn-primary{
+        @include btn;
+        @extend %primaryColor;
+        opacity:  .9;
+        transition: all .3s;
+
+        &hover{
+            opacity: 1;
+        }
+        svg{
+            fill:  #fff;
+        }
+    }
+
+    .btn-outline-primary{
+        @include btn;
+        color: $primaryColor !important;
+        border: 1px solid $primaryColor !important;
+        transition:  all .3s;
+        
+        svg{
+            transition:  fill .3s;
+            fill: $primaryColor !important;
+            background: transparent !important;
+        }
+
+        &:hover, &:hover svg{
+            @extend %primaryColor;
+        }
+        &:hover svg{
+            fill: #ffffff !important;
+        }
+    }
+
+        .success{
+            color: white !important;
+            background: #52c852 !important;
+        }
+
+        .error{
+            color: white !important;
+            background-color: #dd4a4a;
+        }
+
+        .info{
+            color: #333333 !important;
+            background: lighten($primaryColor, 10%)
+        }
+
+        .hint-icon,
+        .hint-text{
+            fill: lighten($primaryColor, 10%) !important;
+            color: lighten($primaryColor, 10%) !important;
+            transition: color .25s;
+            &:hover{
+                fill: darken($primaryColor, 15%);
+                color: darken($primaryColor, 15%);
+            }
+        }
+}

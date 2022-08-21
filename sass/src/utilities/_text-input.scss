@@ -59,7 +59,7 @@ input[type=email]:focus,
 input[type=url]:focus,
 input[type=search]:focus,
 input[type=text]:focus{
-    border-color: lighten(map-get($light-theme-colors, primaryColor), 20%) !important;
+    border-color: map-get($light-theme-colors, primaryColor)!important;
 }
 body.dark-mode{
     input[type=password]:focus,
@@ -67,7 +67,7 @@ body.dark-mode{
     input[type=url]:focus,
     input[type=search]:focus,
     input[type=text]:focus{
-        border-color: lighten(map-get($light-theme-colors, primaryColor), 20%) !important;
+        border-color: map-get($dark-theme-colors, primaryColor) !important;
     }
 }
 

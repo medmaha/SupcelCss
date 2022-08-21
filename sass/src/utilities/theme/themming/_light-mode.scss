@@ -1,0 +1,143 @@
+
+body.light-mode{
+    $textColor: map-get($light-theme-colors, textColor);
+    $textColor-dark: darken($textColor, 20%);
+    $textColor-light: lighten($textColor, 20%);
+    
+    $textMutedColor: map-get($light-theme-colors, textMuted);
+    
+    $primaryColor: map-get($light-theme-colors, primaryColor);
+    $primaryColor-dark: darken($primaryColor, 20%);
+    $primaryColor-light: lighten($primaryColor, 20%);
+    
+    --primary: #00A1E4;
+    --default--border--color: #888888 !important;
+
+    h1, h2, h3, h4, h5, h6 {color: #222222}
+
+    color: map-get($light-theme-colors, textColor );
+    background-image: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6);
+
+
+    // Text
+        %textColor{
+            color: $textColor !important;
+            fill: $textColor !important;
+        }
+        %textColorDark{
+            color: $textColor-dark !important;
+            fill: $textColor-dark !important;
+            
+        }
+        %textColorLight{
+            color: $textColor-light !important;
+            fill: $textColor-light !important;
+        }
+
+        %textMutedColor{
+            color: $textMutedColor !important;
+            fill: $textMutedColor !important;
+        }
+
+        %links{
+            color: $primaryColor !important;
+            fill: $primaryColor !important;
+        }
+
+
+    // UI
+
+    %primaryColor{
+        color: #f6faff !important;
+        background: $primaryColor !important;
+    }
+    %primaryColorDark{
+        color: #f6faff !important;
+        background: $primaryColor-dark !important;
+    }
+    %primaryColorLight{
+            color: darken(#f6faff, 10%) !important;
+        background: $primaryColor-light !important;
+    }
+
+
+    %bgColor{
+        color: map-get($light-theme-colors, textColor );
+        background-image: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6);
+    }
+
+    %inputBorderColor{
+        border-color: lighten(map-get($light-theme-colors, textMuted), 15%);
+    }
+    %surface{
+        background-image: linear-gradient(to right top, #e6f0f4, #e8f1f5, #e9f3f5, #ebf4f6, #edf5f7, #ebf5f8, #e9f6f8, #e7f6f9, #e0f6fa, #d9f5fa, #d2f5fb, #caf4fb);
+    }
+    %surfaceCard{
+        background-image: linear-gradient(to right top, #e6f0f4, #e8f1f5, #e9f3f5, #ebf4f6, #edf5f7, #ebf5f8, #e9f6f8, #e7f6f9, #e0f6fa, #d9f5fa, #d2f5fb, #caf4fb);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+
+    // classes
+    .btn-primary{
+        @include btn;
+        @extend %primaryColor;
+        opacity:  .9;
+        transition: all .3s;
+
+        &hover{
+            opacity: 1;
+        }
+        svg{
+            fill:  #fff;
+        }
+    }
+
+    .btn-outline-primary{
+        @include btn;
+        color: $primaryColor !important;
+        border: 1px solid $primaryColor !important;
+        transition:  all .3s;
+        
+        svg{
+            transition:  fill .3s;
+            fill: $primaryColor !important;
+            background: transparent !important;
+        }
+
+        &:hover, &:hover svg{
+            @extend %primaryColor;
+        }
+        
+        &:hover svg{
+            background: transparent !important;
+            fill: #ffffff !important;
+        }
+    }
+
+    .success{
+        color: darken($color: #FFFFFF, $amount: 5%) !important;
+        background: #0fa00f !important;
+    }
+
+    .error{
+        color: darken($color: #FFFFFF, $amount: 5%) !important;
+        background-color: #e02828;
+    }
+    
+    .hint-icon,
+    .hint-text{
+        fill: $primaryColor-light !important;
+        color: $primaryColor-light !important;
+        transition: color .25s;
+        &:hover{
+            fill: lighten($primaryColor-light, 20%) !important;
+            color: lighten($primaryColor-light, 20%) !important;
+        }
+    }
+    .hint,
+    .info{
+        color: #333333 !important;
+        background: $primaryColor-light !important
+    }
+}

@@ -1,0 +1,20 @@
+
+$theme-colors: (
+    errorColor : #B00020,
+    successColor: #03b503,
+
+    light-mode: (
+        textColor: #444444,
+        textMuted: #888888,
+        primaryColor: #00A1E4,
+    ),
+    dark-mode: (
+        textColor: #cbc9c9,
+        textMuted: #6a6969,
+        primaryColor: #28878a
+    )
+);
+
+$light-theme-colors: map-get($theme-colors, light-mode);
+$dark-theme-colors: map-get($theme-colors, dark-mode);
+
