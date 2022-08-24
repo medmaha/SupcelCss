@@ -3,9 +3,9 @@ body.dark-mode{
     $textColor: map-get($dark-theme-colors, textColor);
     $textColor-dark: darken($textColor, 20%);
     $textColor-light: lighten($textColor, 20%);
-    
+
     $textMutedColor: map-get($dark-theme-colors, textMuted);
-    
+
     $primaryColor: map-get($dark-theme-colors, primaryColor);
     $primaryColor-dark: darken($primaryColor, 20%);
     $primaryColor-light: lighten($primaryColor, 15%);
@@ -16,19 +16,19 @@ body.dark-mode{
     h1, h2, h3, h4, h5, h6 {color: #eee}
 
     color: map-get($dark-theme-colors, textColor );
-    background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);  	
-    
-    
+    background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);
+
+
     // ===========================================   TEXTS   ========================================================//
 
         %textColor{
-            color: $textColor !important;
-            fill: $textColor !important;
+            color: $textColor;
+            fill: $textColor;
         }
         %textColorDark{
             color: $textColor-dark !important;
             fill: $textColor-dark !important;
-            
+
         }
         %textColorLight{
             color: $textColor-light !important;
@@ -44,9 +44,9 @@ body.dark-mode{
             fill: $primaryColor !important;
         }
 
-    
+
     // ===============================================   UI    ================================================================//
-        
+
         %primaryColor{
             color: #f6faff !important;
             background: $primaryColor !important;
@@ -59,10 +59,10 @@ body.dark-mode{
             color: darken(#f6faff, 10%) !important;
             background: $primaryColor-light !important;
         }
-    
+
         %bgColor{
             color: map-get($dark-theme-colors, textColor );
-            background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);  	
+            background-image: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);
         }
 
         %inputBorderColor{
@@ -101,18 +101,18 @@ body.dark-mode{
         color: $primaryColor !important;
         border: 1px solid $primaryColor !important;
         transition:  all .3s;
-        
+
         svg{
             transition:  fill .3s;
             fill: $primaryColor !important;
             background: transparent !important;
         }
-        
+
         &:hover{
             @extend %primaryColor;
         }
         &:hover svg{
-            fill: #f6faff !important;            
+            fill: #f6faff !important;
             background: transparent !important;
         }
 

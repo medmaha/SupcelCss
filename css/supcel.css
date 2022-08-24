@@ -125,8 +125,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 body nav .brand, nav body .brand, body svg, body .text-color,
 body .theme-text, body.dark-mode .btn-outline-primary, body.dark-mode .btn-primary, body.light-mode .btn-outline-primary, body.light-mode .btn-primary, body .btn-outline-primary, body .btn-primary, body .btn, body .btn-small, body .btn-large {
-  color: #444444 !important;
-  fill: #444444 !important;
+  color: #444444;
+  fill: #444444;
 }
 body .dialog .prompt .content, .dialog .prompt body .content, body .text-muted, body textarea,
 body input[type=number],
@@ -252,8 +252,8 @@ body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4, 
 }
 body.light-mode nav .brand, nav body.light-mode .brand, body.light-mode svg, body.light-mode .text-color,
 body.light-mode .theme-text, body.light-mode .btn-outline-primary, body.light-mode .btn-primary, body.light-mode .btn, body.light-mode .btn-small, body.light-mode .btn-large {
-  color: #444444 !important;
-  fill: #444444 !important;
+  color: #444444;
+  fill: #444444;
 }
 body.light-mode .theme-text-dark {
   color: #111111 !important;
@@ -405,8 +405,8 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 }
 body.dark-mode nav .brand, nav body.dark-mode .brand, body.dark-mode svg, body.dark-mode .text-color,
 body.dark-mode .theme-text, body.dark-mode .btn-outline-primary, body.dark-mode .btn-primary, body.dark-mode .btn, body.dark-mode .btn-small, body.dark-mode .btn-large {
-  color: #cbc9c9 !important;
-  fill: #cbc9c9 !important;
+  color: #cbc9c9;
+  fill: #cbc9c9;
 }
 body.dark-mode .theme-text-dark {
   color: #999595 !important;
@@ -3645,111 +3645,111 @@ svg {
 }
 
 svg.white-icon {
-  fill: #ffffff;
+  fill: #ffffff !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-white:hover {
-  fill: #e6e6e6;
+  fill: #e6e6e6 !important;
 }
 
 svg.black-icon {
-  fill: #000000;
+  fill: #000000 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-black:hover {
-  fill: black;
+  fill: black !important;
 }
 
 svg.red-icon {
-  fill: #ff0000;
+  fill: #ff0000 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-red:hover {
-  fill: #cc0000;
+  fill: #cc0000 !important;
 }
 
 svg.blue-icon {
-  fill: #0000ff;
+  fill: #0000ff !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-blue:hover {
-  fill: #0000cc;
+  fill: #0000cc !important;
 }
 
 svg.green-icon {
-  fill: #028f02;
+  fill: #028f02 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-green:hover {
-  fill: #015d01;
+  fill: #015d01 !important;
 }
 
 svg.yellow-icon {
-  fill: #ffff00;
+  fill: #ffff00 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-yellow:hover {
-  fill: #cccc00;
+  fill: #cccc00 !important;
 }
 
 svg.orange-icon {
-  fill: #ffa500;
+  fill: #ffa500 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-orange:hover {
-  fill: #cc8400;
+  fill: #cc8400 !important;
 }
 
 svg.pink-icon {
-  fill: #ff7a91;
+  fill: #ff7a91 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-pink:hover {
-  fill: #ff4767;
+  fill: #ff4767 !important;
 }
 
 svg.brown-icon {
-  fill: #a52a2a;
+  fill: #a52a2a !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-brown:hover {
-  fill: #7c2020;
+  fill: #7c2020 !important;
 }
 
 svg.grey-icon {
-  fill: #696969;
+  fill: #696969 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-grey:hover {
-  fill: #505050;
+  fill: #505050 !important;
 }
 
 svg.violet-icon {
-  fill: #ee82ee;
+  fill: #ee82ee !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-violet:hover {
-  fill: #e855e8;
+  fill: #e855e8 !important;
 }
 
 svg.purple-icon {
-  fill: #800080;
+  fill: #800080 !important;
   transition: fill 0.4s ease-in-out;
 }
 
 svg.on-hover-purple:hover {
-  fill: #4d004d;
+  fill: #4d004d !important;
 }
 
 .container {

@@ -12,12 +12,12 @@ body{
 
     color: $textColor;
     background-color: #dfdede;
-    
+
     // ===========================================   TEXTS   ========================================================//
 
         %textColor{
-            color: $textColor !important;
-            fill: $textColor !important;;
+            color: $textColor;
+            fill: $textColor;
         }
         %textMutedColor{
             color: $textMutedColor !important;
@@ -27,14 +27,14 @@ body{
             color: $primaryColor !important;
             fill: $primaryColor !important;
         }
-    
+
     // ===============================================   UI    ================================================================//
-        
+
         %primaryColor{
             color: #f6faff !important;
             background: $primaryColor !important;
         }
-    
+
         %bgColor{
             background: #eeeeee !important;
         }
@@ -75,7 +75,7 @@ body{
         color: $primaryColor !important;
         border: 1px solid $primaryColor !important;
         transition:  all .3s;
-        
+
         svg{
             transition:  fill .3s;
             fill: $primaryColor !important;

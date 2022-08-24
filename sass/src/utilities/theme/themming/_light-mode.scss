@@ -3,13 +3,13 @@ body.light-mode{
     $textColor: map-get($light-theme-colors, textColor);
     $textColor-dark: darken($textColor, 20%);
     $textColor-light: lighten($textColor, 20%);
-    
+
     $textMutedColor: map-get($light-theme-colors, textMuted);
-    
+
     $primaryColor: map-get($light-theme-colors, primaryColor);
     $primaryColor-dark: darken($primaryColor, 20%);
     $primaryColor-light: lighten($primaryColor, 20%);
-    
+
     --primary: #00A1E4;
     --default--border--color: #888888 !important;
 
@@ -21,13 +21,13 @@ body.light-mode{
 
     // Text
         %textColor{
-            color: $textColor !important;
-            fill: $textColor !important;
+            color: $textColor;
+            fill: $textColor;
         }
         %textColorDark{
             color: $textColor-dark !important;
             fill: $textColor-dark !important;
-            
+
         }
         %textColorLight{
             color: $textColor-light !important;
@@ -98,7 +98,7 @@ body.light-mode{
         color: $primaryColor !important;
         border: 1px solid $primaryColor !important;
         transition:  all .3s;
-        
+
         svg{
             transition:  fill .3s;
             fill: $primaryColor !important;
@@ -108,7 +108,7 @@ body.light-mode{
         &:hover, &:hover svg{
             @extend %primaryColor;
         }
-        
+
         &:hover svg{
             background: transparent !important;
             fill: #ffffff !important;
@@ -124,7 +124,7 @@ body.light-mode{
         color: darken($color: #FFFFFF, $amount: 5%) !important;
         background-color: #e02828;
     }
-    
+
     .hint-icon,
     .hint-text{
         fill: $primaryColor-light !important;

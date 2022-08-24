@@ -33,12 +33,12 @@ svg{
 // icon coloring/filling
 @each $key, $val in $colors {
     svg.#{$key}-icon{
-        fill: $val;
+        fill: $val !important;
         transition: fill .4s ease-in-out;
     }
     svg.on-hover-#{$key}{
         &:hover{
-            fill: darken($color: $val, $amount: 10%);
+            fill: darken($color: $val, $amount: 10%) !important;
         }
     }
 
