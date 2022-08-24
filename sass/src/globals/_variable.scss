@@ -1,0 +1,31 @@
+@use '../utilities/theme/palettes';
+
+// Font Size
+$base-font-size: 1em;
+
+// Spacing
+$base-margin: 1em;
+$base-padding: 1em;
+
+// Sizing
+$base-border-size: 1px;
+$baseBorderRadius: 1em;
+
+$cardBoxShadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+$buttonBoxShadow: 0px 0px 4px rgba(0, 0, 0.1);
+$navbarBoxShadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+:root {
+	@each $color, $value in palettes.$defaultMode-theme-palettes {
+		--#{$color}--: #{$value};
+	}
+	--baseMargin--: #{$base-margin};
+	--basePadding--: #{$base-padding};
+	--baseFontSize--: #{$base-font-size};
+	--baseBoxShadow--: 0px 0px 4px rgba(0, 0, 0.2);
+	--cardBoxShadow--: #{$cardBoxShadow};
+	--buttonBoxShadow--: #{$buttonBoxShadow};
+	--baseBorderRadius--: #{$baseBorderRadius};
+	--baseBorderSize--: #{$base-border-size};
+	--navbarBoxShadow--: #{$navbarBoxShadow};
+}

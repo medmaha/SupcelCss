@@ -1,11 +1,7 @@
-@import'../../component/button';
+@import '../../component/button';
 
-body, body *{
-    transition: background-color .7s linear;
-}
-
-@import'palettes';
-@import'themming/normal-mode';
-@import'themming/light-mode';
-@import'themming/dark-mode';
-@import'classes';
+@import 'themming/default-mode';
+@import 'themming/high-contrast';
+@import 'themming/light-mode';
+@import 'themming/dark-mode';
+@import 'classes';

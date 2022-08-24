@@ -1,18 +1,18 @@
 // Variables
-@import'resetsheet'; 
-@import'variable'; 
+@import 'globals/resetsheet';
+@import 'globals/variable';
 
-// Utilities
-@import'utilities/utils';
+// // Utilities
+@import 'utilities/utils';
 
 // Grid and layout
-@import'grid/breakpoint';
-@import'grid/grid-columns';
+@import 'grid/breakpoint';
+@import 'grid/grid-columns';
 
-// Componets
-@import'component/card';
-@import'component/button';
-@import'component/navbar';
+// // Components
+@import 'component/card';
+@import 'component/button';
+@import 'component/navbar';
 
-// Custom Utills
-@import'base';
+// // Custom Utils
+@import 'globals/base';

@@ -1,61 +1,59 @@
-@mixin  card {
-    display: inline-block;
-    padding: $base-padding;
-    border-radius: .3rem;
-    width: 100%;
-    overflow: hidden;
+@mixin card {
+	display: inline-block;
+	padding: var(--basePadding--);
+	border-radius: 0.3rem;
+	width: 100%;
+	overflow: hidden;
 }
-@mixin card-title{
-    .card-title{
-        font-size: $base-font-size * 1.5;
-        display: flex;
-        width: 100%;
-        text-align: center;
-        padding-bottom: $base-padding;
-        width: 100%;
-    }
+@mixin card-title {
+	.card-title {
+		font-size: calc(var(--basePadding--) * 1.5);
+		display: flex;
+		width: 100%;
+		text-align: center;
+		padding-bottom: var(--basePadding--);
+		width: 100%;
+	}
 }
 @mixin card-body {
-    .card-body{
-        padding: $base-padding $base-padding * .2;
-        overflow: hidden;
-        font-size: small;
-    }
+	.card-body {
+		padding: calc(var(--basePadding--) * 0.5) var(--basePadding--);
+		overflow: hidden;
+	}
 }
-@mixin card-links{
-    .card-links{
-        padding: $base-padding * .25;
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        .link, a{
-            cursor: pointer;
-            margin: 0 .5rem;
-            font-size: $base-font-size * .8;
-            transition: all .2s linear;
-            @extend %links;
-            &:hover{
-                transform: scale(1.1);
-                opacity: .9;
-            }
-        }
-    }
-}
-
-.flat-card{
-    @include card();
-    @include card-title();
-    @include card-body();
-    @include card-links();
-    @extend %surface  ; 
+@mixin card-links {
+	.card-links {
+		padding: calc(var(--basePadding--) * 0.25);
+		width: 100%;
+		display: flex;
+		justify-content: right;
+		.link,
+		a {
+			cursor: pointer;
+			margin: 0 0.5rem;
+			font-size: calc(var(--baseFontSize--) * 0.8);
+			transition: all 0.2s linear;
+			@extend %links;
+			&:hover {
+				transform: scale(1.1);
+				opacity: 0.9;
+			}
+		}
+	}
 }
 
-.card{
-    @include card();
-    @include card-title();
-    @include card-body();
-    @include card-links();
-    @extend %surfaceCard;
+.flat-card {
+	@include card();
+	@include card-title();
+	@include card-body();
+	@include card-links();
+	@extend %surface;
 }
 
-
+.card {
+	@include card();
+	@include card-title();
+	@include card-body();
+	@include card-links();
+	@extend %surfaceCard;
+}

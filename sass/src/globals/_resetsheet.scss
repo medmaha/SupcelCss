@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	list-style: none;
+	color: inherit;
+}
+
+body {
+	line-height: 1;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+}
+body,
+body * {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	transition: all background-color 0.8s;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: 1px;
+	overflow-wrap: break-word;
+}
+p {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}

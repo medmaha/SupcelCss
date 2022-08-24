@@ -1,8 +1,9 @@
 @use '../palettes';
 @import './mixins';
 
-body.dark-mode {
-	@include theme-variables(palettes.$darkMode-theme-palettes);
+body,
+body.default-mode {
+	@include theme-variables(palettes.$defaultMode-theme-palettes);
 
 	// ===========================================   TEXTS   ========================================================//
 
@@ -28,7 +29,7 @@ body.dark-mode {
 	}
 
 	%secondaryColor {
-		color: var(--textColor--) !important;
+		@extend %primaryColor;
 		background-color: var(--secondaryColor--) !important;
 	}
 

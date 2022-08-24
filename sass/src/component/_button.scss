@@ -1,47 +1,120 @@
-@mixin btn($bg-color: transparent) {
-    cursor: pointer;
-    margin: 0;
-    border: none;
-    outline: none;
-    display: flex;
-    gap: 1rem;
-    font-size: 1em;
-    align-items: center;
-    border-radius: .3rem;
-    text-transform: capitalize;
-    justify-content: space-between;
-    background-color: transparent;
-    transition: background-color .4s ease-in-out;
-    box-shadow: 0 0 2px rgba(0,0,0.2);
-    padding: $base-padding * .5 $base-padding;
-
-    &:hover{
-        opacity: .9;
-    }
-    @extend %textColor;
+@mixin btn-hover() {
+	&:hover {
+		transform: scale(1.01);
+	}
+	&:active {
+		opacity: 0.9;
+		transform: translateY(3%);
+	}
+	@content;
 }
 
+@mixin btn() {
+	cursor: pointer;
+	margin: 0;
+	padding: calc(var(--basePadding--) * 0.3) calc(var(--basePadding--) * 0.6);
+	border: none;
+	outline: none;
+	font-size: var(--baseFontSize--);
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	background-color: transparent;
+	box-shadow: var(--buttonBoxShadow--);
+	border-radius: calc(var(--baseBorderRadius--) * 0.3);
+	height: fit-content;
 
-.btn{
-    @include btn;
-    gap: .5rem;
+	@include btn-hover();
+	@content;
 }
 
-.btn-small{
-    @include btn;
-    padding: $base-padding * .2 $base-padding * .5 !important;
-    font-size: $base-font-size - .3 !important;
-}
-.btn-large{
-    @include btn;
-    padding: $base-padding $base-padding * 2 !important;
-    font-size: $base-font-size + .5 !important;
-    svg{
-        max-width: 1.5rem !important;
-    }
+.btn {
+	@include btn;
 }
 
+@mixin icon-button(
+	$fontSize: calc(var(--baseFontSize--) * 0.9),
+	$iconWidth: calc(var(--baseFontSize--) * 0.9),
+	$iconHeight: calc(var(--baseFontSize--) * 0.9),
+	$gap: calc(var(--basePadding--) * 0.5)
+) {
+	@include btn() {
+		display: inline-flex;
+		align-items: center;
+		gap: calc(var(--basePadding--) * 0.5) !important;
+		font-size: $fontSize !important;
+		padding: calc(var(--basePadding--) * 0.6) calc(var(--basePadding--) * 0.8) !important;
+		@content;
 
+		svg {
+			width: $iconWidth !important;
+			height: $iconHeight !important;
+		}
+	}
+}
+
+.btn-small {
+	@include btn();
+	font-size: calc(var(--baseFontSize--) * 0.85) !important;
+	border-radius: calc(var(--baseBorderRadius--) * 0.1) !important;
+	padding: calc(var(--basePadding--) * 0.15) calc(var(--basePadding--) * 0.3) !important;
+
+	svg {
+		width: calc(var(--baseFontSize--) * 0.7) !important;
+		height: calc(var(--baseFontSize--) * 0.7) !important;
+	}
+}
+.btn-large {
+	@include btn;
+	border-radius: calc(var(--baseBorderRadius--) * 0.5) !important;
+	padding: var(--basePadding--) calc(var(--basePadding--) * 2) !important;
+	font-size: calc(var(--baseFontSize--) * 1.2) !important;
+	letter-spacing: 2px !important;
+}
+.btn-extra-large {
+	@include btn;
+	border-radius: calc(var(--baseBorderRadius--) * 1) !important;
+	padding: calc(var(--basePadding--) * 1.5) calc(var(--basePadding--) * 3) !important;
+	font-size: calc(var(--baseFontSize--) * 1.5) !important;
+	letter-spacing: 3px !important;
+}
+
+/**
+	*Icon Buttons
+*/
+.icon-btn {
+	// padding: 2px 5px !important;
+	@include icon-button();
+}
+
+.icon-btn.btn-small {
+	padding: calc(var(--basePadding--) * 0.3) calc(var(--basePadding--) * 0.5) !important;
+	@include icon-button(
+		$fontSize: calc(var(--baseFontSize--) * 0.7),
+		$iconWidth: calc(var(--baseFontSize--) * 0.7),
+		$iconHeight: calc(var(--baseFontSize--) * 0.7),
+		$gap: calc(var(--basePadding--) * 0.25)
+	);
+}
+.icon-btn.btn-large {
+	padding: calc(var(--basePadding--) * 0.3) calc(var(--basePadding--) * 0.5) !important;
+	@include icon-button(
+		$fontSize: calc(var(--baseFontSize--) + 0.5),
+		$iconWidth: calc(var(--baseFontSize--) + 0.5),
+		$iconHeight: calc(var(--baseFontSize--) + 0.5),
+		$gap: calc(var(--basePadding--) * 0.25)
+	);
+}
+
+// ===========================
+
+.btn-primary {
+	@include btn();
+	@extend %primaryColor;
+}
+.btn-secondary {
+	@include btn();
+	@extend %secondaryColor;
+}
 
 // @each $key, $value in $colors {
 //     .btn-#{$key}{

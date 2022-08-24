@@ -1,8 +1,12 @@
 @use '../palettes';
 @import './mixins';
 
-body.dark-mode {
-	@include theme-variables(palettes.$darkMode-theme-palettes);
+body.high-contrast {
+	@include theme-variables(palettes.$highContrast-theme-palettes);
+
+	color: var(--textColor--);
+	background-image: var(--bgImage--);
+	background-color: var(--bgColor--);
 
 	// ===========================================   TEXTS   ========================================================//
 
