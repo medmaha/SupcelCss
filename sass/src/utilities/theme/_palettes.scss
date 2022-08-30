@@ -1,72 +1,108 @@
+// 1. Primary
+// 2. Primary Variant
+// 3. Secondary
+// 4. Secondary Variant
+// 5. Background
+// 6. Surface
+// 7. Error
+// 8. On Primary
+// 9. On Secondary
+// 10. On Background
+// 11. On Surface
+// 12. On Error
+
 $themes-palettes: (
 	errorColor: #e12f4fe2,
 	successColor: #60f360c9,
 
 	default-mode: (
-		bgColor: #f1f1f1,
-		bgImage: none,
-		textColor: #333333,
-		textMuted: #6a6969,
-		primaryColor: #2f00ffdd,
-		baseLineColor: #ffffff,
-		secondaryColor: #49b8bceb,
+		primaryColor: #00afe4dd,
+		onPrimaryColor: #222222,
+		primaryColorVariant: lighten(#00afe4dd, 15%),
+		//
+		secondaryColor: #4606c6,
+		onSecondaryColor: #f1f1f1,
+		secondaryColorVariant: lighten(#4606c6, 15%),
+		//
+		surfaceColor: #ffffff,
+		onSurfaceColor: #333333,
+		//
+		errorColor: #f03053e2,
+		onErrorColor: #ffffff,
+		//
+		successColor: #4df54dc9,
+		onSuccessColor: #f1f1f1,
+		//
+		backgroundColor: #fbfbfb,
+		onBackgroundColor: #313131,
+		backgroundImage: none,
 	),
 	light-mode: (
-		bgColor: #cbc9c9,
-		textColor: #333333,
-		textMuted: #888888,
-		primaryColor: #28878ae4,
-		baseLineColor: #ffffff,
+		primaryColor: #28878a,
+		onPrimaryColor: #ffffff,
+		primaryColorVariant: lighten(#28878ae4, 15%),
+		//
 		secondaryColor: #2d46ff,
-		bgImage:
-			linear-gradient(
-				to left top,
-				#e4f5fb,
-				#ebf6fd,
-				#f1f8fe,
-				#f6faff,
-				#fbfcff,
-				#fafbff,
-				#f9fbff,
-				#f8faff,
-				#f0f7ff,
-				#e7f5fe,
-				#dcf3fb,
-				#d2f1f6
-			),
+		onSecondaryColor: #f1f1f1,
+		secondaryColorVariant: lighten(#2d46ff, 5%),
+		//
+		surfaceColor: #f9fbff,
+		onSurfaceColor: #333333,
+		//
+		errorColor: #f03053e2,
+		onErrorColor: #ffffff,
+		//
+		successColor: #26e326c9,
+		onSuccessColor: #f1f1f1,
+		//
+		backgroundColor: #e4f5fb,
+		onBackgroundColor: #404040,
+
+		backgroundImage: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6),
 	),
 	dark-mode: (
-		bgColor: #031627,
-		textColor: #cbc9c9,
-		textMuted: #6a6969,
 		primaryColor: #00a1e4,
-		baseLineColor: #3b3b3b,
-		secondaryColor: #f27725c6,
-		bgImage:
-			linear-gradient(
-				to left top,
-				#031627,
-				#04192a,
-				#041b2d,
-				#031d31,
-				#032034,
-				#032035,
-				#022136,
-				#022137,
-				#021f35,
-				#021c34,
-				#021a32,
-				#031730
-			),
+		onPrimaryColor: #222222,
+		primaryColorVariant: lighten(#00a1e4, 15%),
+		//
+		secondaryColor: #008080,
+		onSecondaryColor: #ffffff,
+		secondaryColorVariant: darken(#008080, 15%),
+		//
+		surfaceColor: linear-gradient(#032035, #032035),
+		onSurfaceColor: #f1f1f1ef,
+		//
+		errorColor: #ff3d61,
+		onErrorColor: #ffffffef,
+		//
+		successColor: #3ff83fde,
+		onSuccessColor: #f1f1f1f1,
+		//
+		backgroundColor: #031627,
+		onBackgroundColor: #d8d8d8,
+		backgroundImage: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730),
 	),
 	high-contrast: (
-		bgImage: none,
-		bgColor: #000000,
-		textColor: #c3c1c1,
-		textMuted: #b5b5b5,
 		primaryColor: #ffff00,
-		baseLineColor: rgb(32, 32, 32),
-		secondaryColor: #0033ff,
+		onPrimaryColor: #202020,
+		primaryColorVariant: darken(#ffff00, 15%),
+		//
+		secondaryColor: #69a6f0,
+		onSecondaryColor: #222222,
+		secondaryColorVariant: lighten(#69a6f0, 10%),
+		//
+		surfaceColor: lighten(#000000, 10%),
+		onSurfaceColor: #efeded,
+		//
+		errorColor: #ff002f,
+		onErrorColor: #ffffff,
+		//
+		successColor: #00ff00,
+		onSuccessColor: #130101,
+		//
+		backgroundColor: #000000,
+		onBackgroundColor: #dfdddd,
+		backgroundImage: none,
 	),
 );
 

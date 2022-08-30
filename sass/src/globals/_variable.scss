@@ -1,31 +1,35 @@
 @use '../utilities/theme/palettes';
 
 // Font Size
-$base-font-size: 1em;
+$base-font-size: 1rem;
 
 // Spacing
-$base-margin: 1em;
-$base-padding: 1em;
+$base-margin: 1rem;
+$base-padding: 1rem;
 
 // Sizing
 $base-border-size: 1px;
-$baseBorderRadius: 1em;
+$baseBorderRadius: 1rem;
 
-$cardBoxShadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-$buttonBoxShadow: 0px 0px 4px rgba(0, 0, 0.1);
+$cardBoxShadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$buttonBoxShadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 $navbarBoxShadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
 :root {
 	@each $color, $value in palettes.$defaultMode-theme-palettes {
 		--#{$color}--: #{$value};
 	}
+
+	--neutralTextColor--: rgb(100, 95, 95);
+	--neutralTextMutedColor--: rgba(97, 94, 94, 0.6);
 	--baseMargin--: #{$base-margin};
 	--basePadding--: #{$base-padding};
 	--baseFontSize--: #{$base-font-size};
-	--baseBoxShadow--: 0px 0px 4px rgba(0, 0, 0.2);
 	--cardBoxShadow--: #{$cardBoxShadow};
+
 	--buttonBoxShadow--: #{$buttonBoxShadow};
 	--baseBorderRadius--: #{$baseBorderRadius};
+
 	--baseBorderSize--: #{$base-border-size};
 	--navbarBoxShadow--: #{$navbarBoxShadow};
 }

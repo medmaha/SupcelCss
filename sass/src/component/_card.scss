@@ -11,19 +11,17 @@
 		display: flex;
 		width: 100%;
 		text-align: center;
-		padding-bottom: var(--basePadding--);
 		width: 100%;
 	}
 }
 @mixin card-body {
 	.card-body {
-		padding: calc(var(--basePadding--) * 0.5) var(--basePadding--);
+		padding: calc(var(--basePadding--) * 0.7) 0;
 		overflow: hidden;
 	}
 }
 @mixin card-links {
 	.card-links {
-		padding: calc(var(--basePadding--) * 0.25);
 		width: 100%;
 		display: flex;
 		justify-content: right;
@@ -32,7 +30,7 @@
 			cursor: pointer;
 			margin: 0 0.5rem;
 			font-size: calc(var(--baseFontSize--) * 0.8);
-			transition: all 0.2s linear;
+			transition: opacity 200ms ease-in, transform 200ms ease-in;
 			@extend %links;
 			&:hover {
 				transform: scale(1.1);
@@ -47,7 +45,7 @@
 	@include card-title();
 	@include card-body();
 	@include card-links();
-	@extend %surface;
+	@extend %flatSurfaceCard;
 }
 
 .card {

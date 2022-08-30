@@ -1,0 +1,49 @@
+%list-items {
+	display: flex;
+	flex-flow: column;
+	gap: calc(var(--baseFontSize--) * 0.3);
+	padding: var(--basePadding--) calc(var(--basePadding--) * 0.5);
+
+	> *,
+	.item {
+		line-height: var(--baseFontSize--);
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.2s ease-out color 0.2s ease-in, fill 0.2s linear;
+		position: relative;
+		gap: auto;
+		justify-content: space-between;
+		padding: calc(var(--baseFontSize--) * 0.3) 0;
+		border-radius: calc(var(--baseBorderRadius--) * 0.25);
+
+		.item-text {
+			font-size: var(--baseFontSize--);
+			font-weight: normal;
+			// overflow-wrap: break-word;
+		}
+		.item-icon {
+			width: var(--baseFontSize--);
+			height: var(--baseFontSize--);
+			justify-self: flex-end;
+		}
+	}
+
+	.item.active {
+		padding: calc(var(--baseFontSize--) * 0.5) calc(var(--baseFontSize--) * 0.3);
+		@extend %primaryColorVariant;
+
+		.item-icon {
+			margin-right: 0;
+		}
+	}
+}
+
+.divider {
+	display: block;
+	width: 100%;
+	max-height: 1px;
+	margin-block-start: var(--baseMargin--);
+	margin-block-end: var(--baseMargin--);
+	background-color: var(--neutralTextMutedColor--);
+}

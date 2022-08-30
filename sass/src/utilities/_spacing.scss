@@ -1,222 +1,151 @@
 
+$spacing-values-padding: (
+	0: 0,
+	1: calc(var(--basePadding--) * 1),
+	2: calc(var(--basePadding--) * 2),
+	3: calc(var(--basePadding--) * 3.2),
+	4: calc(var(--basePadding--) * 4.2),
+	5: calc(var(--basePadding--) * 6),
+);
+$spacing-values-margin: (
+	0: 0,
+	1: calc(var(--baseMargin--) * 1),
+	2: calc(var(--baseMargin--) * 2),
+	3: calc(var(--baseMargin--) * 3.2),
+	4: calc(var(--baseMargin--) * 4.2),
+	5: calc(var(--baseMargin--) * 6),
+);
 $spacing-utills: (
-    'padding': (
-        prefix: 'p',
-        'values': (
-            0: 0,
-            1: $base-padding * 1,
-            2: $base-padding * 2,
-            3: $base-padding * 3.5,
-            4: $base-padding * 5.5,
-            5: $base-padding * 7.5
-        )
-    ),
-    'padding-left': (
-        prefix: 'pl',
-        'values': (
-            0: 0,
-            1: $base-padding * 1,
-            2: $base-padding * 2,
-            3: $base-padding * 3.5,
-            4: $base-padding * 5.5,
-            5: $base-padding * 7.5
-        )
-    ),
-    'padding-right': (
-        prefix: 'pr',
-        'values': (
-            0: 0,
-            1: $base-padding * 1,
-            2: $base-padding * 2,
-            3: $base-padding * 3.5,
-            4: $base-padding * 5.5,
-            5: $base-padding * 7.5
-        )
-    ),
-    'padding-top': (
-        prefix: 'pt',
-        'values': (
-            0: 0,
-            1: $base-padding * 1,
-            2: $base-padding * 2,
-            3: $base-padding * 3.5,
-            4: $base-padding * 5.5,
-            5: $base-padding * 7.5
-        )
-    ),
-    'padding-bottom': (
-        prefix: 'pb',
-        'values': (
-            0: 0,
-            1: $base-padding * 1,
-            2: $base-padding * 2,
-            3: $base-padding * 3.5,
-            4: $base-padding * 5.5,
-            5: $base-padding * 7.5
-        )
-    ),
-    'margin': (
-        prefix: 'm',
-        'values': (
-            0: 0,
-            1: $base-margin * 1,
-            2: $base-margin * 2,
-            3: $base-margin * 3.5,
-            4: $base-margin * 5.5,
-            5: $base-margin * 7.5
-        )
-    ),
-    'margin-left': (
-        prefix: 'ml',
-        'values': (
-            0: 0,
-            1: $base-margin * 1,
-            2: $base-margin * 2,
-            3: $base-margin * 3.5,
-            4: $base-margin * 5.5,
-            5: $base-margin * 7.5
-        )
-    ),
-    'margin-right': (
-        prefix: 'mr',
-        'values': (
-            0: 0,
-            1: $base-margin * 1,
-            2: $base-margin * 2,
-            3: $base-margin * 3.5,
-            4: $base-margin * 5.5,
-            5: $base-margin * 7.5
-        )
-    ),
-    'margin-top': (
-        prefix: 'mt',
-        'values': (
-            0: 0,
-            1: $base-padding * .5,
-            2: $base-padding * 1,
-            3: $base-padding * 2.5,
-            4: $base-padding * 6,
-            5: $base-padding * 8
-        )
-    ),
-    'margin-bottom': (
-        prefix: 'mb',
-        'values': (
-            0: 0,
-            1: $base-margin * 1,
-            2: $base-margin * 2,
-            3: $base-margin * 3.5,
-            4: $base-margin * 5.5,
-            5: $base-margin * 7.5
-        )
-    ),
+	'padding': (
+		prefix: 'p',
+	),
+	'padding-left': (
+		prefix: 'pl',
+	),
+	'padding-right': (
+		prefix: 'pr',
+	),
+	'padding-top': (
+		prefix: 'pt',
+	),
+	'padding-bottom': (
+		prefix: 'pb',
+	),
+	'margin': (
+		prefix: 'm',
+	),
+	'margin-left': (
+		prefix: 'ml',
+	),
+	'margin-right': (
+		prefix: 'mr',
+	),
+	'margin-top': (
+		prefix: 'mt',
+	),
+	'margin-bottom': (
+		prefix: 'mb',
+	),
 );
 // displays
 
-.p-__{
-    padding: $base-padding * .5;
-}
-.pl-__{
-    padding-left: $base-padding * .5;
-}
-.pr-__{
-    padding-right: $base-padding * .5;
-}
-.pt-__{
-    padding-top: $base-padding * .5;
 
-}
-.pb-__{
-    padding-bottom: $base-padding * .5;
-}
-.py-__{
-    padding-top: $base-padding * .5;
-    padding-bottom: $base-padding * .5;
-}
-.px-__{
-    padding-left: $base-padding * .5;
-    padding-right: $base-padding * .5;
+@each $key, $val in  $spacing-values-padding {
+	.px-#{$key}{
+		padding-left: $val;
+		padding-right: $val;
+	}
+	.py-#{$key}{
+		padding-top: $val;
+		padding-bottom: $val;
+	}
 }
 
-.m-__{
-    margin: $base-margin * .5;
+@each $key, $val in  $spacing-values-padding {
+	.mx-#{$key}{
+		margin-left: $val;
+		margin-right: $val;
+	}
+	.my-#{$key}{
+		margin-top: $val;
+		margin-bottom: $val;
+	}
 }
-.ml-__{
-    margin-left: $base-margin * .5;
-}
-.mr-__{
-    margin-right: $base-margin * .5;
-}
-.mt__{
-    margin-top: $base-margin * .5;
-
-}
-.mb-__{
-    margin-bottom: $base-margin * .5;
-}
-.my-__{
-    margin-top: $base-margin * .5;
-    margin-bottom: $base-margin * .5;
-}
-.mx-__{
-    margin-left: $base-margin * .5;
-    margin-right: $base-margin * .5;
-}
-
 
 @each $property, $map in $spacing-utills {
-    $prefix: map-get($map, 'prefix');
-    $values: map-get($map, 'values');
+	$prefix: map-get($map, 'prefix');
+	// padding/margin to a specific cordinate
+	@if ($prefix == 'm' or $prefix == 'mr' or $prefix == 'ml' or $prefix == 'mt' or $prefix == 'mb') {
+		@each $key, $val in $spacing-values-margin {
+			.#{$prefix}-#{$key} {
+				#{$property}: $val;
+			}
+		}
+	}
+	@if ($prefix == 'p' or $prefix == 'pl' or $prefix == 'pr' or $prefix == 'pt' or $prefix == 'pb') {
+		// padding/margin  to both cordinates
+		@each $key, $val in  $spacing-values-padding {
+			.#{$prefix}-#{$key} {
+				#{$property}: $val;
+			}
+			.px-#{$key}{
+				padding-top: $val;
+				padding-bottom: $val;
+			}
+			.py-#{$key}{
+				padding-top: $val;
+				padding-bottom: $val;
+			}
+		}
+	}
+}
 
-    // padding/margin to a specific cordinate
-    @if ($prefix != 'p' and $prefix != 'm') {
-        @each $key, $val in $values {
-            .#{$prefix}-#{$key}{
-                #{$property}: $val !important;
-            }
-        }
-    }
-    @if ($prefix == 'p'){
-        // padding/margin  to both cordinates
-        @each $key, $val in $values {
-            .#{$prefix}-#{$key}{ 
-                #{$property}: $val !important;
-            }
-        }
-        // padding/margin to xcordinate
-        @each $key, $val in $values {
-            .#{$prefix}x-#{$key}{ 
-                padding-left: $val !important;
-                padding-right: $val !important;
-            }
-        }
-        // padding/margin  to ycordinate
-        @each $key, $val in $values {
-            .#{$prefix}y-#{$key}{ 
-                padding-top: $val !important;
-                padding-bottom: $val !important;
-            }
-        }
-    }
-     @if ($prefix == 'm'){
-        @each $key, $val in $values {
-            .#{$prefix}-#{$key}{ 
-                #{$property}: $val !important;
-            }
-        }
-        // padding/margin to xcordinate
-        @each $key, $val in $values {
-            .#{$prefix}x-#{$key}{ 
-                margin-left: $val !important;
-                margin-right: $val !important;
-            }
-        }
-        // padding/margin  to ycordinate
-        @each $key, $val in $values {
-            .#{$prefix}y-#{$key}{ 
-                margin-top: $val !important;
-                margin-bottom: $val !important;
-            }
-        }
-     }
+
+
+.p-__ {
+	padding: calc(var(--basePadding--) * 0.5);
+}
+.pl-__ {
+	padding-left: calc(var(--basePadding--) * 0.5);
+}
+.pr-__ {
+	padding-right: calc(var(--basePadding--) * 0.5);
+}
+.pt-__ {
+	padding-top: calc(var(--basePadding--) * 0.5);
+}
+.pb-__ {
+	padding-bottom: calc(var(--basePadding--) * 0.5);
+}
+.py-__ {
+	padding-top: calc(var(--basePadding--) * 0.5);
+	padding-bottom: calc(var(--basePadding--) * 0.5);
+}
+.px-__ {
+	padding-left: calc(var(--basePadding--) * 0.5);
+	padding-right: calc(var(--basePadding--) * 0.5);
+}
+
+.m-__ {
+	margin: calc(var(--baseMargin--) * .5);
+}
+.ml-__ {
+	margin-left: calc(var(--baseMargin--) * .5);
+}
+.mr-__ {
+	margin-right: calc(var(--baseMargin--) * .5);
+}
+.mt__ {
+	margin-top: calc(var(--baseMargin--) * .5);
+}
+.mb-__ {
+	margin-bottom: calc(var(--baseMargin--) * .5);
+}
+.my-__ {
+	margin-top: calc(var(--baseMargin--) * .5);
+	margin-bottom: calc(var(--baseMargin--) * .5);
+}
+.mx-__ {
+	margin-left: calc(var(--baseMargin--) * .5);
+	margin-right: calc(var(--baseMargin--) * .5);
 }

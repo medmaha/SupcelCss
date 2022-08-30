@@ -1,60 +1,8 @@
 @use '../palettes';
-@import './mixins';
+@import './mixins/variables';
+@import './mixins/selectors';
 
 body.high-contrast {
 	@include theme-variables(palettes.$highContrast-theme-palettes);
-
-	color: var(--textColor--);
-	background-image: var(--bgImage--);
-	background-color: var(--bgColor--);
-
-	// ===========================================   TEXTS   ========================================================//
-
-	%textColor {
-		color: var(--textColor--);
-		fill: var(--textColor--);
-	}
-
-	%textMutedColor {
-		color: var(--textMutedColor--) !important;
-		fill: var(--textMutedColor--) !important;
-	}
-	%links {
-		color: var(--primaryColor--) !important;
-		fill: var(--primaryColor--) !important;
-	}
-
-	// ===============================================   UI    ================================================================//
-
-	%primaryColor {
-		color: var(--baseLineColor--) !important;
-		background: var(--primaryColor--) !important;
-	}
-
-	%secondaryColor {
-		color: var(--textColor--) !important;
-		background-color: var(--secondaryColor--) !important;
-	}
-
-	%bgColor {
-		color: var(--textColor--) !important;
-		background-color: var(--bgColor--) !important;
-		background-image: var(--bgImage--) !important;
-	}
-
-	%inputBorderColor {
-		border-color: var(--textColor--);
-	}
-
-	%surface {
-		background-color: var(--surfaceColor--) !important;
-		background-image: var(--bgImage--) !important;
-	}
-
-	%surfaceCard {
-		box-shadow: var(--cardBoxShadow--);
-		@extend %surface;
-	}
-
-	// ====================================== CLASSES =========================================================//
+	@include theme-selectors();
 }

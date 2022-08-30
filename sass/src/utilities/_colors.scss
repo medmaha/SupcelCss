@@ -1,41 +1,40 @@
 // Color pallet
 $colors: (
-    'white': #ffffff,
-    'black': #000000,
-    'red': #ff0000,
-    'blue': #0000ff,
-    'green': #028f02,
-    'yellow': #ffff00,
-    'orange': #ffa500,
-    'pink': #ff7a91,
-    'brown': #a52a2a,
-    'grey': #696969,
-    'violet': #ee82ee,
-    'purple': #800080,
+	'white': #ffffff,
+	'black': #000000,
+	'red': #ff0000,
+	'blue': #0000ff,
+	'green': #028f02,
+	'yellow': #ffff00,
+	'orange': #ffa500,
+	'pink': #ff7a91,
+	'brown': #a52a2a,
+	'grey': #696969,
+	'violet': #ee82ee,
+	'purple': #800080,
 );
 
 @each $key, $val in $colors {
-    .#{$key}{
-        background-color: $val !important;
-    }
-    .#{$key}-text{
-        color: $val !important;
-    }
+	.#{$key} {
+		background-color: $val;
+	}
+	.#{$key}-text {
+		color: $val;
+	}
 }
 
 // Hover Colors
-@each $key, $val in $colors{
-    .on-hover-#{$key}{
-        transition: background-color .4s;
-        &:hover{
-            background-color: $val !important;
-        }
-    }
-    .on-text-hover-#{$key}{
-        transition: color .4s;
-        &:hover{
-            color: $val !important;
-        }
-    }
+@each $key, $val in $colors {
+	.on-hover-#{$key} {
+		transition: background-color 0.4s;
+		&:hover {
+			background-color: $val;
+		}
+	}
+	.on-text-hover-#{$key} {
+		transition: color 0.4s;
+		&:hover {
+			color: $val;
+		}
+	}
 }
-

@@ -1,72 +1,73 @@
+$values: (
+	1: 1px,
+	2: 2px,
+	3: 3px,
+	4: 4px,
+	5: 5px,
+	6: 6px,
+	7: 7px,
+	8: 8px,
+	9: 9px,
+	10: 10px,
+);
+$borders: (border, border-top, border-left, border-right, border-bottom, border-style, border-color);
 
-$values: ( 1:1px, 2:2px, 3:3px, 4:4px, 5:5px, 6:6px, 7:7px, 8:8px, 9:9px, 10:10px );
-$borders: (
-    border,
-    border-top,
-    border-left,
-    border-right,
-    border-bottom,
-    border-style,
-    border-color,
-    );
-    
-.border{
-    border: calc(1px / 2) solid var(--default--border--color);
+.border {
+	border: calc(1px / 2) solid var(--default--border--color);
 }
 @each $prefix in $borders {
-    @if ($prefix == 'border'){
-        @each $key, $value in $values {
-            .#{$prefix}-#{$key}{
-                #{$prefix}: #{$value} solid var(--default--border--color);
-            }
-        }
-    };
-    @if ($prefix == 'border-top'){
-        @each $key, $value in $values {
-            .#{$prefix}-#{$key}{
-                border: none;
-                #{$prefix}: #{$value} solid var(--default--border--color) !important;
-            }
-        }
-    }
-    @if ($prefix == 'border-left'){
-        @each $key, $value in $values {
-            .#{$prefix}-#{$key}{
-                border: none;
-                #{$prefix}: #{$value} solid var(--default--border--color) !important;
-            }
-        }
-    }
-    @if ($prefix == 'border-right'){
-        @each $key, $value in $values {
-            .#{$prefix}-#{$key}{
-                border: none;
-                #{$prefix}: #{$value} solid var(--default--border--color) !important;
-            }
-        }
-    }
-    @if ($prefix == 'border-bottom'){
-        @each $key, $value in $values {
-            .#{$prefix}-#{$key}{
-                border: none;
-                #{$prefix}: #{$value} solid var(--default--border--color) !important;
-            }
-        }
-    }
-    @if ($prefix == 'border-color'){
-        @each $color, $val in $colors {
-            .#{$prefix}-#{$color}{
-                #{$prefix}: $val !important;
-            }
-        }
-    }
-    @if ($prefix == 'border-style'){
-        $styles: (dashed, dotted, double, groove, solid, hidden, inherit, unset);
-        @each $style in $styles {
-            .#{$prefix}-#{$style}{
-                #{$prefix}: $style !important;
-            }
-        }
-    }
-    
-};
+	@if ($prefix == 'border') {
+		@each $key, $value in $values {
+			.#{$prefix}-#{$key} {
+				#{$prefix}: #{$value} solid var(--default--border--color);
+			}
+		}
+	}
+	@if ($prefix == 'border-top') {
+		@each $key, $value in $values {
+			.#{$prefix}-#{$key} {
+				border: none;
+				#{$prefix}: #{$value} solid var(--default--border--color);
+			}
+		}
+	}
+	@if ($prefix == 'border-left') {
+		@each $key, $value in $values {
+			.#{$prefix}-#{$key} {
+				border: none;
+				#{$prefix}: #{$value} solid var(--default--border--color);
+			}
+		}
+	}
+	@if ($prefix == 'border-right') {
+		@each $key, $value in $values {
+			.#{$prefix}-#{$key} {
+				border: none;
+				#{$prefix}: #{$value} solid var(--default--border--color);
+			}
+		}
+	}
+	@if ($prefix == 'border-bottom') {
+		@each $key, $value in $values {
+			.#{$prefix}-#{$key} {
+				border: none;
+				#{$prefix}: #{$value} solid var(--default--border--color);
+			}
+		}
+	}
+	@if ($prefix == 'border-color') {
+		@each $color, $val in $colors {
+			.#{$prefix}-#{$color} {
+				#{$prefix}: $val;
+			}
+		}
+	}
+	@if ($prefix == 'border-style') {
+		$styles: (dashed, dotted, double, groove, solid, hidden, inherit, unset);
+		@each $style in $styles {
+			.#{$prefix}-#{$style} {
+				#{$prefix}: $style;
+			}
+		}
+	}
+} ;

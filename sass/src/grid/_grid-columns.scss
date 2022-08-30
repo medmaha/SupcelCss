@@ -1,33 +1,34 @@
 $grid-columns: 12;
+
 $gaps-sizes: (
-    '0': 0,
-    '1':10px,
-    '2':20px,
-    '3':30px,
-    '4':40px,
-    '5':50px,
+	'0': 0,
+	'1': 10px,
+	'2': 20px,
+	'3': 30px,
+	'4': 40px,
+	'5': 50px,
 );
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 
 .row {
-    display: flex;
-    flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 @for $idx from 1 through 5 {
-    $gap: $idx * .5;
-    .row.gap-#{$idx}{
-        margin: 0 -.3rem
-    }
-    .row.gap-#{$idx} > *{
-        padding: 0 $base-padding * $gap
-    }
+	$gap: $idx * 0.5;
+	.row.gap-#{$idx} {
+		margin: 0 -0.3rem;
+	}
+	.row.gap-#{$idx} > * {
+		padding: 0 $base-padding * $gap;
+	}
 }
 //
 // @each $key, $val in $gaps-sizes {
@@ -41,50 +42,52 @@ $gaps-sizes: (
 // }
 
 @include xs {
-    $base-font-size: .8rem;
-    @for $idx from 1 through $grid-columns {
-        // font-size: .8rem;
-        .col-#{$idx}-xs {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc($idx*100% / $grid-columns);
-        }
-    }
+	@for $idx from 1 through $grid-columns {
+		// font-size: .8rem;
+		.col-#{$idx}-xs {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
 }
 @include sm {
-    $base-font-size: .8rem;
-    @for $idx from 1 through $grid-columns {
-        .col-#{$idx}-sm {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc($idx*100% / $grid-columns);
-        }
-    }
+	@for $idx from 1 through $grid-columns {
+		.col-#{$idx}-sm {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
 }
 @include md {
-    @for $idx from 1 through $grid-columns {
-        .col-#{$idx}-md {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc($idx*100% / $grid-columns);
-        }
-    }
+	@for $idx from 1 through $grid-columns {
+		.col-#{$idx}-md {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
 }
 @include lg {
-    @for $idx from 1 through $grid-columns {
-        .col-#{$idx}-lg {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc($idx*100% / $grid-columns);
-        }
-    }
+	@for $idx from 1 through $grid-columns {
+		.col-#{$idx}-lg {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
 }
 @include xl {
-    @for $idx from 1 through $grid-columns {
-        .col-#{$idx}-xl {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc($idx*100% / $grid-columns);
-        }
-    }
+	@for $idx from 1 through $grid-columns {
+		.col-#{$idx}-xl {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
+}
+
+@include breakpoint(1440px) {
+	@for $idx from 1 through $grid-columns {
+		.col-#{$idx}-xl {
+			flex-grow: 0;
+			width: calc($idx * 100% / $grid-columns);
+		}
+	}
 }

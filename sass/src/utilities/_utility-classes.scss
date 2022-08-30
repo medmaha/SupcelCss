@@ -1,0 +1,127 @@
+// ======================================= TEXTS ==============================================
+.center {
+	text-align: center;
+}
+
+.right{
+	text-align: right
+}
+
+.left{
+	text-align: left
+}
+
+
+// Hidding elements
+.hide {
+	display: none;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.profile-img-lg,
+.profile-img {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	img {
+		border-radius: 100%;
+		border: 1px solid var(--text--color);
+		width: 100%;
+		height: 100%;
+		// height: 100%;
+		object-fit: cover;
+	}
+}
+
+.profile-img-lg {
+	width: 60px;
+	height: 60px;
+}
+
+// image responsive
+img.responsive {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// Colors Depending On Theme Changes
+.bg-color {
+	background-color: var(--backgroundColor--);
+}
+
+.text-color {
+	fill: var(--onBackgroundColor--);
+	color: var(--onBackgroundColor--);
+}
+.light-text-color {
+	color: var(--onBackgroundColorLight--);
+	fill: var(--onBackgroundColorLight--);
+}
+.dark-text-color {
+	color: var(--onBackgroundColorDark--);
+	fill: var(--onBackgroundColorLight--);
+}
+
+
+.z-index-0{
+	z-index: -1;
+}
+.z-index-1 {
+	z-index: 1;
+}
+.z-index-1-plus {
+	z-index: 10;
+}
+
+.link-item {
+	cursor: pointer;
+	font: var(--baseFontSize--);
+	color: var(--primaryColor--);
+	fill: var(--primaryColor--);
+	transition: opacity .150ms ;
+	&:hover{
+		opacity: .98
+	}
+}
+
+// @debug(@extend %links);
+
+.typography {
+	letter-spacing: 1px;
+	font-weight: 400;
+	line-height: 20px;
+	overflow-wrap: break-word;
+	font-size: calc(var(--baseFontSize--) * 0.85);
+}
+
+// ========================================== UI =============================================
+.theme-primary {
+	color: var(--onPrimaryColor--);
+	fill: var(--onPrimaryColor--);
+	background: var(--primaryColor--)
+}
+
+.theme-secondary {
+	color: var(--onSecondaryColor--);
+	fill: var(--onSecondaryColor--);
+	background: var(--secondaryColor--)
+}
+
+.primary-text{
+	color: var(--onPrimaryColor--);
+	fill: var(--onPrimaryColor--)
+}
+
+.secondary-text{
+	color: var(--onSecondaryColor--);
+	fill: var(--onSecondaryColor--);
+}
+
+.text-muted{
+	color: var(--neutralTextMutedColor--);
+	fill: var(--neutralTextMutedColor--);
+}

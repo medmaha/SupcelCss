@@ -1,0 +1,54 @@
+#popup {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	min-width: 300px;
+	max-width: 450px;
+	min-height: 100px;
+	transform: translateY(-50%) translateX(-50%);
+	@extend %flatSurfaceCard;
+	border-radius: calc(var(--baseBorderRadius--) * 0.5);
+	box-shadow: 0 5px 20px 5px rgba($color: #000000, $alpha: 0.1);
+	// margin: 0 calc(var(--baseMargin--) * 0.2);
+	padding: calc(var(--basePadding--) * 2) var(--basePadding--);
+	padding-bottom: var(--basePadding--);
+
+	transition: transform 0.3s linear;
+
+	display: none;
+	flex-flow: column;
+	// justify-content: space-evenly;
+
+	.title {
+		text-align: center;
+		margin-bottom: calc(var(--baseMargin--) * 1);
+		font-size: calc(var(--baseFontSize--) * 1.5);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.content {
+		padding: 0 var(--basePadding--);
+		font-size: small;
+		text-align: center;
+		line-height: calc(var(--baseFontSize--) * 1.15);
+	}
+
+	.buttons {
+		flex: 1;
+		min-height: 100%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: right;
+		gap: var(--baseFontSize--);
+		margin-top: var(--baseMargin--);
+
+		> * {
+			cursor: pointer;
+		}
+	}
+}
+
+#popup.active {
+	display: flex;
+}

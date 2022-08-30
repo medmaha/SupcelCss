@@ -1,0 +1,91 @@
+@mixin theme-variables($palette) {
+	$primaryColor: map-get(
+		$map: $palette,
+		$key: primaryColor,
+	);
+	$onPrimaryColor: map-get(
+		$map: $palette,
+		$key: onPrimaryColor,
+	);
+	$primaryColorVariant: map-get(
+		$map: $palette,
+		$key: primaryColorVariant,
+	);
+	//
+	$secondaryColor: map-get(
+		$map: $palette,
+		$key: secondaryColor,
+	);
+	$onSecondaryColor: map-get(
+		$map: $palette,
+		$key: onSecondaryColor,
+	);
+	$secondaryColorVariant: map-get(
+		$map: $palette,
+		$key: secondaryColorVariant,
+	);
+	//
+	$surfaceColor: map-get(
+		$map: $palette,
+		$key: surfaceColor,
+	);
+	$onSurfaceColor: map-get(
+		$map: $palette,
+		$key: onSurfaceColor,
+	);
+	//
+	$errorColor: map-get(
+		$map: $palette,
+		$key: errorColor,
+	);
+	$onErrorColor: map-get(
+		$map: $palette,
+		$key: onErrorColor,
+	);
+	$successColor: map-get(
+		$map: $palette,
+		$key: successColor,
+	);
+	$onSuccessColor: map-get(
+		$map: $palette,
+		$key: onSuccessColor,
+	);
+	//
+	$backgroundImage: map-get(
+		$map: $palette,
+		$key: backgroundImage,
+	);
+	$backgroundColor: map-get(
+		$map: $palette,
+		$key: backgroundColor,
+	);
+	$onBackgroundColor: map-get(
+		$map: $palette,
+		$key: onBackgroundColor,
+	);
+
+	--primaryColor--: #{$primaryColor};
+	--onPrimaryColor--: #{$onPrimaryColor};
+	--primaryColorVariant--: #{$primaryColorVariant};
+
+	--secondaryColor--: #{$secondaryColor};
+	--onSecondaryColor--: #{$onSecondaryColor};
+	--secondaryColorVariant--: #{$secondaryColorVariant};
+
+	--surfaceColor--: #{$surfaceColor};
+	--onSurfaceColor--: #{$onSurfaceColor};
+
+	--errorColor--: #{$errorColor};
+	--onErrorColor--: #{$onErrorColor};
+
+	--successColor--: #{$successColor};
+	--onSuccessColor--: #{$onSuccessColor};
+
+	--backgroundImage--: #{$backgroundImage};
+	--backgroundColor--: #{$backgroundColor};
+	--onBackgroundColor--: #{$onBackgroundColor};
+
+	color: var(--onBackgroundColor--);
+	background-image: var(--backgroundImage--);
+	background-color: var(--backgroundColor--);
+}

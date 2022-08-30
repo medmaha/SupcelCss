@@ -1,0 +1,50 @@
+#dialog {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.2);
+	.prompt {
+		overflow: hidden;
+		@extend %surfaceCard;
+		padding: var(--basePadding--);
+		min-height: 150px;
+		max-height: 500px;
+		min-width: 300px;
+		max-width: 600px;
+		border-radius: 0.5rem;
+		height: fit-content;
+
+		.title {
+			font-size: var(--baseFontSize--);
+			padding: var(--basePadding--) 0;
+		}
+		.content {
+			padding: calc(var(--basePadding--) * 0.5) 0;
+			overflow-wrap: break-word;
+		}
+
+		.buttons {
+			padding: var(--basePadding--);
+			display: flex;
+			justify-content: right;
+			gap: 0.1rem;
+			transition: background-color all 0.1s;
+
+			.bttn {
+				display: inline-block;
+				padding: calc(var(--basePadding--) * 0.5) var(--basePadding--);
+				border-radius: 0.4rem;
+				cursor: pointer;
+				&:hover {
+					@extend %themeColor;
+				}
+			}
+		}
+	}
+}

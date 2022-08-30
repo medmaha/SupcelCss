@@ -18,7 +18,7 @@ body {
 body,
 body * {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	transition: all background-color 0.8s;
+	transition: background-color, 0.8s ease-out color 0.8s ease-out;
 }
 
 img,
@@ -45,6 +45,7 @@ h5,
 h6 {
 	letter-spacing: 1px;
 	overflow-wrap: break-word;
+	font-weight: normal;
 }
 p {
 	overflow-wrap: break-word;

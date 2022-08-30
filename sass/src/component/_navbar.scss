@@ -1,70 +1,53 @@
+@import './navbarDrawer';
+
 %flex-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-
-nav {
-	background-color: var(--surfaceColor--);
-	color: var(--textColor--);
-	padding: calc(var(--baseFontSize--) * 0.75);
+%NavigationBar {
+	width: 100%;
 	height: 65px;
+	position: relative;
+	padding: 0 var(--basePadding--);
+	background-color: var(--surfaceColor--);
 	box-shadow: var(--navbarBoxShadow--);
+	z-index: 1;
 
 	@extend %flex-wrapper;
-	@extend %surface;
+	@extend %surfaceCard;
 
 	.container {
 		height: 100%;
-		padding: 0 0.5rem;
 		@extend %flex-wrapper;
 	}
 
-	.brand {
-		@extend %textColor;
+	.brands,
+	.nav-brand {
 		cursor: pointer;
 		margin-right: 0.5rem;
-		font-size: calc(var(--baseFontSize--) * 1.8) !important;
-		transition: all 0.2s linear;
+		font-size: calc(var(--baseFontSize--) * 200);
 		@media (max-width: 720px) {
-			font-size: calc(var(--baseFontSize--) * 1.8) !important;
+			font-size: calc(var(--baseFontSize--) * 1.8);
 		}
 		@media (max-width: 300px) {
-			font-size: calc(var(--baseFontSize--) * 1.8) !important;
+			font-size: calc(var(--baseFontSize--) * 1.8);
 		}
 	}
 
-	form.search-bar {
-		gap: 5px;
-		display: flex;
-		align-items: center;
-		width: 100%;
-		max-width: 35%;
-		@media (max-width: 480px) {
-			max-width: 50%;
-		}
-
+	.nav-search {
+		flex: 0.7;
 		input {
-			border-radius: 4px !important;
+			max-width: 100%;
 		}
 	}
-	.nav-links {
-		margin-left: 0.5rem;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		gap: 1.5rem;
-		height: 100%;
 
-		@media (max-width: 600px) {
-			gap: 1rem !important;
-		}
-		@media (max-width: 500px) {
-			gap: 0.9rem !important;
-		}
-		@media (max-width: 480px) {
-			display: none;
-		}
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		gap: var(--baseFontSize--);
 
 		@mixin link {
 			display: flex;
@@ -80,24 +63,12 @@ nav {
 				transform: scale(1.1);
 			}
 			svg {
-				transition: 0.3s ease-in-out;
-				width: 1.5rem !important;
-				height: 1.5rem !important;
+				transition: fill 0.3s ease-in-out;
+				width: 1.5rem;
+				height: 1.5rem;
 				&:hover {
 					transform: scale(1.1);
 					@extend %links;
-				}
-			}
-			@media (max-width: 600px) {
-				svg {
-					width: 1.2rem !important;
-					height: 1.2rem !important;
-				}
-			}
-			@media (max-width: 500px) {
-				svg {
-					width: 1rem !important;
-					height: 1rem !important;
 				}
 			}
 		}
@@ -107,23 +78,100 @@ nav {
 			@include link;
 		}
 	}
+
 	.nav-profile {
-		border: 1px solid var(--textMutedColor--);
-		border-radius: 50%;
-		overflow: hidden;
 		cursor: pointer;
-		max-width: 45px;
-		max-height: 45px;
-		@media (max-width: 600px) {
-			max-width: 35px;
-			max-height: 35px;
-		}
+		border: 1px solid var(--textMutedColor--);
+		height: 100%;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		padding: var(--basePadding--);
 
 		img {
 			aspect-ratio: 1;
-			width: 100%;
-			height: 100%;
+			width: 45px;
+			height: 45px;
 			object-fit: cover;
+			border-radius: 50%;
+			overflow: hidden;
 		}
 	}
+
+	@extend %navbarDrawer;
+
+	@media (max-width: 840px) {
+		justify-content: flex-start;
+		gap: calc(var(--baseFontSize--) * 2.5);
+
+		.nav-links {
+			display: none;
+		}
+
+		.nav-profile {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.nav-drawer-toggler {
+			display: flex;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.nav-drawer {
+			width: 85vw;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.nav-search {
+			flex: 0.8;
+		}
+		.nav-profile {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: none;
+		}
+
+		.nav-drawer-toggler {
+			right: 0;
+		}
+	}
+
+	@media (max-width: 430px) {
+		.nav-search {
+			display: none;
+		}
+
+		.nav-profile {
+			display: flex;
+		}
+
+		.nav-drawer-toggler {
+			right: calc(var(--basePadding--) * 2.5);
+		}
+	}
+}
+
+.navbar,
+nav {
+	@extend %NavigationBar;
+}
+
+.navbar.fixed,
+nav.fixed {
+	top: 0;
+	left: 0;
+	position: fixed;
+	@extend %NavigationBar;
+}
+
+nav + * {
+	margin-top: 5px;
+}
+nav.fixed + * {
+	margin-top: 70px;
 }

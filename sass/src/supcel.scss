@@ -1,18 +1,20 @@
 // Variables
-@import 'globals/resetsheet';
-@import 'globals/variable';
+@layer base, component, utils;
 
-// // Utilities
-@import 'utilities/utils';
+@layer base{
+    @import 'globals/variable';
+    @import 'utilities/colors';
+    @import 'utilities/theme/base';
+    @import 'globals/resetsheet';
+    @import 'grid/breakpoint';
+    @import 'grid/grid-columns';
+}
 
-// Grid and layout
-@import 'grid/breakpoint';
-@import 'grid/grid-columns';
 
-// // Components
-@import 'component/card';
-@import 'component/button';
-@import 'component/navbar';
+@layer component{
+    @import 'component/base';
+}
 
-// // Custom Utils
-@import 'globals/base';
+@layer utils{
+    @import 'utilities/utils';
+}

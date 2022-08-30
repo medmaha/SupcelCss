@@ -1,0 +1,104 @@
+%navbarDrawer {
+	.nav-drawer-toggler {
+		top: 0;
+		height: 100%;
+		display: none;
+		cursor: pointer;
+		position: absolute;
+		align-items: center;
+		padding: var(--basePadding--);
+		right: calc(var(--basePadding--) * 2.5);
+		margin-right: calc(var(--baseMargin--) * 0.15);
+
+		&:active {
+			@extend %links;
+		}
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+
+	.nav-drawer-container {
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100vw;
+		height: 100vh;
+		display: none;
+		background: rgba(0, 0, 0, 0.2);
+		position: absolute;
+
+		.nav-drawer {
+			width: 300px;
+			height: 100%;
+			position: relative;
+			@extend %surfaceCard;
+			transform: translateX(-110%);
+			transition: transform 10s;
+			// padding: calc(var(--basePadding--) * 1.3);
+
+			.nav-drawer {
+				animation-name: navDrawer;
+				animation-duration: 0.25s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in-out;
+			}
+			.header {
+				// empty
+				padding: calc(var(--basePadding--) * 1);
+			}
+
+			.nav-drawer-exit {
+				z-index: 1;
+				width: 2rem;
+				height: 2rem;
+				display: flex;
+				cursor: pointer;
+				position: absolute;
+				align-items: center;
+				transform: scale(0.95);
+				justify-content: center;
+				@extend %flatSurfaceCard;
+				transition: transform 200ms ease-in-out;
+				text-transform: capitalize;
+				right: var(--baseFontSize--);
+				top: calc(var(--baseFontSize--) * 1);
+				font-size: calc(var(--baseFontSize--) * 1.5);
+				border-radius: calc(var(--baseBorderRadius--) * 100);
+
+				&:hover {
+					transform: scale(1);
+					box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+				}
+				&:active {
+					transform: scale(0.9);
+					box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+				}
+			}
+
+			.nav-drawer-items {
+				margin-top: var(--baseMargin--);
+				@extend %list-items;
+				.item:hover {
+					@extend %primaryColor;
+				}
+			}
+		}
+	}
+	.nav-drawer-container.active {
+		display: block;
+		.nav-drawer {
+			animation-name: navDrawer;
+			animation-duration: 0.25s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in-out;
+		}
+	}
+
+	@keyframes navDrawer {
+		100% {
+			transform: translateX(0%);
+		}
+	}
+}

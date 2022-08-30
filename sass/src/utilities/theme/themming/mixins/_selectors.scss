@@ -1,0 +1,46 @@
+@mixin theme-selectors {
+	%themeColor {
+		color: var(--onBackgroundColor--);
+		background-color: var(--backgroundColor--);
+		background-image: var(--backgroundImage--);
+	}
+
+	%onBackgroundColor {
+		color: var(--onBackgroundColor--);
+		fill: var(--onBackgroundColor--);
+	}
+
+	%primaryColor {
+		color: var(--onPrimaryColor--);
+		fill: var(--onPrimaryColor--);
+		background: var(--primaryColor--);
+	}
+	%primaryColorVariant {
+		color: var(--onPrimaryColor--);
+		fill: var(--onPrimaryColor--);
+		background: var(--primaryColorVariant--);
+	}
+
+	%secondaryColor {
+		color: var(--onSecondaryColor--);
+		background-color: var(--secondaryColor--);
+	}
+	%secondaryColorVariant {
+		color: var(--onSecondaryColor--);
+		background-color: var(--secondaryColorVariant--);
+	}
+
+	%links {
+		color: var(--primaryColorVariant--);
+		fill: var(--primaryColorVariant--);
+	}
+
+	%surfaceCard {
+		box-shadow: var(--cardBoxShadow--);
+		@extend %flatSurfaceCard;
+	}
+	%flatSurfaceCard {
+		background-color: var(--surfaceColor--);
+		background-image: var(--backgroundImage--);
+	}
+}

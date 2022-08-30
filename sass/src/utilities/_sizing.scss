@@ -1,51 +1,48 @@
 // Percentage
-@for $idx from 0 through 21{
-     $size: $idx * 5;
-    //  percentage eg.. --> width-50 --> max-width >> 50%
-    .width-#{$size}{
-        width: #{$size}+'%' !important;
-    }
+@for $idx from 0 through 21 {
+	$size: $idx * 5;
+	//  percentage eg.. --> width-50 --> max-width >> 50%
+	.width-#{$size} {
+		width: #{$size}+ '%';
+	}
 
-    // percentage eg.. --> height-50 --> max-height >> 50%
-    .height-#{$size}{
-        height: #{$size}+'%'  !important;
-    }
+	// percentage eg.. --> height-50 --> max-height >> 50%
+	.height-#{$size} {
+		height: #{$size}+ '%';
+	}
 
-    // view width eg.. --> width-10-vw --> max-width
+	// view width eg.. --> width-10-vw --> max-width
 
-    .width-#{$size}-vw{
-        height: #{$size}+'vw' !important;
-    }
+	.width-#{$size}-vw {
+		height: #{$size}+ 'vw';
+	}
 
-     // view height eg.. --> height-10-vw --> max-height
-    .height-#{$size}-vh{
-        height: #{$size}+'vw' !important;
-    }
+	// view height eg.. --> height-10-vw --> max-height
+	.height-#{$size}-vh {
+		height: #{$size}+ 'vw';
+	}
 }
 
 // Pixels
-@for $idx from 1 through 50{
-     // pixels eg.. --> width-50-px --> max-width
-    .width-#{$idx}-px{
-        width: #{$idx}+'px' !important;
-    }
-    // pixels eg.. --> height-50-px --> max-height
-    .height-#{$idx}-px{
-        height: #{$idx}+'px'  !important;
-    }
+@for $idx from 1 through 50 {
+	// pixels eg.. --> width-50-px --> max-width
+	.width-#{$idx}-px {
+		width: #{$idx}+ 'px';
+	}
+	// pixels eg.. --> height-50-px --> max-height
+	.height-#{$idx}-px {
+		height: #{$idx}+ 'px';
+	}
 }
-
 
 // Rem
-@for $idx from 1 through 20{
-    // rem eg.. --> width-5-rem --> max-width
-    .width-#{$idx}-rem{
-        width: #{$idx}+'rem' !important;
-    }
-    // rem eg.. --> height-5-rem --> max-height
-    .height-#{$idx}-rem{
-        height: #{$idx}+'rem'  !important;
-    }
+@for $idx from 1 through 20 {
+	// rem eg.. --> width-5-rem --> max-width
+	.width-#{$idx}-rem {
+		width: #{$idx}+ 'rem';
+	}
+	// rem eg.. --> height-5-rem --> max-height
+	.height-#{$idx}-rem {
+		height: #{$idx}+ 'rem';
+	}
 }
-
-
