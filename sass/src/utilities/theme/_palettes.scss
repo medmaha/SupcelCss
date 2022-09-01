@@ -38,7 +38,7 @@ $themes-palettes: (
 		backgroundImage: none,
 	),
 	light-mode: (
-		primaryColor: #28878a,
+		primaryColor: #1D9BF0,
 		onPrimaryColor: #ffffff,
 		primaryColorVariant: lighten(#28878ae4, 15%),
 		//
@@ -55,21 +55,24 @@ $themes-palettes: (
 		successColor: #26e326c9,
 		onSuccessColor: #f1f1f1,
 		//
-		backgroundColor: #e4f5fb,
+		backgroundColor: #FFFFFF,
+		onBackgroundColorLight: #0F1419,
 		onBackgroundColor: #404040,
 
-		backgroundImage: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6),
+		backgroundImage: none
+
+		// backgroundImage: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6),
 	),
 	dark-mode: (
-		primaryColor: #00a1e4,
+		primaryColor: #28878a,
 		onPrimaryColor: #222222,
-		primaryColorVariant: lighten(#00a1e4, 15%),
+		primaryColorVariant: darken(#1D9BF0, 10%),
 		//
 		secondaryColor: #008080,
 		onSecondaryColor: #ffffff,
 		secondaryColorVariant: darken(#008080, 15%),
 		//
-		surfaceColor: linear-gradient(#032035, #032035),
+		surfaceColor: #080808,
 		onSurfaceColor: #f1f1f1ef,
 		//
 		errorColor: #ff3d61,
@@ -78,9 +81,12 @@ $themes-palettes: (
 		successColor: #3ff83fde,
 		onSuccessColor: #f1f1f1f1,
 		//
-		backgroundColor: #031627,
-		onBackgroundColor: #d8d8d8,
-		backgroundImage: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730),
+		backgroundColor: #000000,
+		onBackgroundColor: #d6d9db,
+		onBackgroundColorDark: #71767B,
+		onBackgroundColorLight: #E7E9EA,
+
+		backgroundImage: none
 	),
 	high-contrast: (
 		primaryColor: #ffff00,

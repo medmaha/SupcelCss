@@ -11,7 +11,7 @@ $base-padding: 1rem;
 $base-border-size: 1px;
 $baseBorderRadius: 1rem;
 
-$cardBoxShadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$cardBoxShadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
 $buttonBoxShadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 $navbarBoxShadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
@@ -26,6 +26,8 @@ $navbarBoxShadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 	--basePadding--: #{$base-padding};
 	--baseFontSize--: #{$base-font-size};
 	--cardBoxShadow--: #{$cardBoxShadow};
+
+	--nav-height:  65px;
 
 	--buttonBoxShadow--: #{$buttonBoxShadow};
 	--baseBorderRadius--: #{$baseBorderRadius};

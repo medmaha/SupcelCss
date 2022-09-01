@@ -1,21 +1,19 @@
 %navbarDrawer {
 	.nav-drawer-toggler {
-		top: 0;
-		height: 100%;
+		min-height: 100%;
+		min-width: 25px;
 		display: none;
-		cursor: pointer;
-		position: absolute;
 		align-items: center;
-		padding: var(--basePadding--);
-		right: calc(var(--basePadding--) * 2.5);
-		margin-right: calc(var(--baseMargin--) * 0.15);
+		justify-content:center;
+		order: -1;
+		cursor: pointer;
 
-		&:active {
-			@extend %links;
-		}
 		svg {
-			width: 1.5rem;
-			height: 1.5rem;
+			width: 25px;
+			height: 25px;
+			&:hover{
+				fill: var(--onBackgroundColorLight--)
+			}
 		}
 	}
 

@@ -40,12 +40,12 @@ $visions-displays: (
 	'font-size': (
 		'prefix': 'font',
 		'values': (
-			'xs': calc(var(--baseFontSize--) * 0.35),
-			'sm': calc(var(--baseFontSize--) * 0.65),
+			'xs': calc(var(--baseFontSize--) * 0.45),
+			'sm': calc(var(--baseFontSize--) * 0.7),
 			'md': var(--baseFontSize--),
-			'lg': calc(var(--baseFontSize--) * 2),
-			'xl': calc(var(--baseFontSize--) * 2.8),
-			'xxl': calc(var(--baseFontSize--) * 3.3),
+			'lg': calc(var(--baseFontSize--) * 1.5),
+			'xl': calc(var(--baseFontSize--) * 2.2),
+			'xxl': calc(var(--baseFontSize--) * 3.5),
 		),
 	),
 );

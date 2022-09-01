@@ -21,7 +21,8 @@
     --baseMargin--: 1rem;
     --basePadding--: 1rem;
     --baseFontSize--: 1rem;
-    --cardBoxShadow--: 0 0 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --cardBoxShadow--: 0 0 1px rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    --nav-height: 65px;
     --buttonBoxShadow--: 0px 2px 4px rgba(0, 0, 0, 0.2);
     --baseBorderRadius--: 1rem;
     --baseBorderSize--: 1px;
@@ -260,6 +261,8 @@ body.default-mode {
     --backgroundImage--: none;
     --backgroundColor--: #fbfbfb;
     --onBackgroundColor--: #313131;
+    --onBackgroundColorDark--: ;
+    --onBackgroundColorLight--: ;
     color: var(--onBackgroundColor--);
     background-image: var(--backgroundImage--);
     background-color: var(--backgroundColor--);
@@ -298,36 +301,6 @@ body .card .card-links a,
 .card .card-links body a, body .flat-card .card-links .link, .flat-card .card-links body .link,
 body .flat-card .card-links a,
 .flat-card .card-links body a,
-body nav.fixed .nav-links a svg:hover, body .navbar .nav-links a svg:hover,
-body nav .nav-links a svg:hover,
-nav.fixed .nav-links a body svg:hover, .navbar .nav-links a body svg:hover,
-nav .nav-links a body svg:hover,
-body nav.fixed .nav-links .link svg:hover,
-body .navbar .nav-links .link svg:hover,
-body nav .nav-links .link svg:hover,
-nav.fixed .nav-links .link body svg:hover,
-.navbar .nav-links .link body svg:hover,
-nav .nav-links .link body svg:hover,
-body nav.fixed .nav-links a:hover, body .navbar .nav-links a:hover,
-body nav .nav-links a:hover,
-nav.fixed .nav-links body a:hover, .navbar .nav-links body a:hover,
-nav .nav-links body a:hover,
-body nav.fixed .nav-links .link:hover,
-body .navbar .nav-links .link:hover,
-body nav .nav-links .link:hover,
-nav.fixed .nav-links body .link:hover,
-.navbar .nav-links body .link:hover,
-nav .nav-links body .link:hover,
-body nav.fixed .nav-links .link a:hover,
-body .navbar .nav-links .link a:hover,
-body nav .nav-links .link a:hover,
-nav.fixed .nav-links .link body a:hover,
-.navbar .nav-links .link body a:hover,
-nav .nav-links .link body a:hover,
-body nav.fixed .nav-drawer-toggler:active, body .navbar .nav-drawer-toggler:active,
-body nav .nav-drawer-toggler:active,
-nav.fixed body .nav-drawer-toggler:active, .navbar body .nav-drawer-toggler:active,
-nav body .nav-drawer-toggler:active,
 body.default-mode .card .card-links a,
 .card .card-links body.default-mode a,
 body.default-mode .flat-card .card-links a,
@@ -370,6 +343,7 @@ body.default-mode nav.fixed,
 body.default-mode .navbar,
 body.default-mode nav,
 body.default-mode .flat-card {
+    color: var(--onSurfaceColor--);
     background-color: var(--surfaceColor--);
     background-image: var(--backgroundImage--);
   }
@@ -389,6 +363,8 @@ body.default-mode .flat-card {
     --backgroundImage--: none;
     --backgroundColor--: #000000;
     --onBackgroundColor--: #dfdddd;
+    --onBackgroundColorDark--: ;
+    --onBackgroundColorLight--: ;
     color: var(--onBackgroundColor--);
     background-image: var(--backgroundImage--);
     background-color: var(--backgroundColor--);
@@ -422,21 +398,7 @@ nav .nav-drawer-container .nav-drawer .nav-drawer-items body.high-contrast .item
 body.high-contrast .card .card-links a,
 .card .card-links body.high-contrast a, body.high-contrast .flat-card .card-links .link, .flat-card .card-links body.high-contrast .link,
 body.high-contrast .flat-card .card-links a,
-.flat-card .card-links body.high-contrast a, body.high-contrast .navbar .nav-links a svg:hover,
-body.high-contrast nav .nav-links a svg:hover, .navbar .nav-links a body.high-contrast svg:hover,
-nav .nav-links a body.high-contrast svg:hover,
-body.high-contrast .navbar .nav-links .link svg:hover,
-body.high-contrast nav .nav-links .link svg:hover,
-.navbar .nav-links .link body.high-contrast svg:hover,
-nav .nav-links .link body.high-contrast svg:hover, body.high-contrast .navbar .nav-links a:hover,
-body.high-contrast nav .nav-links a:hover, .navbar .nav-links body.high-contrast a:hover,
-nav .nav-links body.high-contrast a:hover,
-body.high-contrast .navbar .nav-links .link:hover,
-body.high-contrast nav .nav-links .link:hover,
-.navbar .nav-links body.high-contrast .link:hover,
-nav .nav-links body.high-contrast .link:hover, body.high-contrast .navbar .nav-drawer-toggler:active,
-body.high-contrast nav .nav-drawer-toggler:active, .navbar body.high-contrast .nav-drawer-toggler:active,
-nav body.high-contrast .nav-drawer-toggler:active {
+.flat-card .card-links body.high-contrast a {
     color: var(--primaryColorVariant--);
     fill: var(--primaryColorVariant--);
   }
@@ -454,11 +416,12 @@ body.high-contrast nav.fixed, body.high-contrast .navbar,
 body.high-contrast nav, body.high-contrast .navbar .nav-drawer-container .nav-drawer,
 body.high-contrast nav .nav-drawer-container .nav-drawer, .navbar .nav-drawer-container body.high-contrast .nav-drawer,
 nav .nav-drawer-container body.high-contrast .nav-drawer {
+    color: var(--onSurfaceColor--);
     background-color: var(--surfaceColor--);
     background-image: var(--backgroundImage--);
   }
   body.light-mode {
-    --primaryColor--: #28878a;
+    --primaryColor--: #1D9BF0;
     --onPrimaryColor--: #ffffff;
     --primaryColorVariant--: rgba(57, 193, 197, 0.8941176471);
     --secondaryColor--: #2d46ff;
@@ -470,9 +433,11 @@ nav .nav-drawer-container body.high-contrast .nav-drawer {
     --onErrorColor--: #ffffff;
     --successColor--: rgba(38, 227, 38, 0.7882352941);
     --onSuccessColor--: #f1f1f1;
-    --backgroundImage--: linear-gradient(to left top, #e4f5fb, #ebf6fd, #f1f8fe, #f6faff, #fbfcff, #fafbff, #f9fbff, #f8faff, #f0f7ff, #e7f5fe, #dcf3fb, #d2f1f6);
-    --backgroundColor--: #e4f5fb;
+    --backgroundImage--: none;
+    --backgroundColor--: #FFFFFF;
     --onBackgroundColor--: #404040;
+    --onBackgroundColorDark--: ;
+    --onBackgroundColorLight--: #0F1419;
     color: var(--onBackgroundColor--);
     background-image: var(--backgroundImage--);
     background-color: var(--backgroundColor--);
@@ -506,21 +471,7 @@ nav .nav-drawer-container .nav-drawer .nav-drawer-items body.light-mode .item.ac
 body.light-mode .card .card-links a,
 .card .card-links body.light-mode a, body.light-mode .flat-card .card-links .link, .flat-card .card-links body.light-mode .link,
 body.light-mode .flat-card .card-links a,
-.flat-card .card-links body.light-mode a, body.light-mode .navbar .nav-links a svg:hover,
-body.light-mode nav .nav-links a svg:hover, .navbar .nav-links a body.light-mode svg:hover,
-nav .nav-links a body.light-mode svg:hover,
-body.light-mode .navbar .nav-links .link svg:hover,
-body.light-mode nav .nav-links .link svg:hover,
-.navbar .nav-links .link body.light-mode svg:hover,
-nav .nav-links .link body.light-mode svg:hover, body.light-mode .navbar .nav-links a:hover,
-body.light-mode nav .nav-links a:hover, .navbar .nav-links body.light-mode a:hover,
-nav .nav-links body.light-mode a:hover,
-body.light-mode .navbar .nav-links .link:hover,
-body.light-mode nav .nav-links .link:hover,
-.navbar .nav-links body.light-mode .link:hover,
-nav .nav-links body.light-mode .link:hover, body.light-mode .navbar .nav-drawer-toggler:active,
-body.light-mode nav .nav-drawer-toggler:active, .navbar body.light-mode .nav-drawer-toggler:active,
-nav body.light-mode .nav-drawer-toggler:active {
+.flat-card .card-links body.light-mode a {
     color: var(--primaryColorVariant--);
     fill: var(--primaryColorVariant--);
   }
@@ -538,25 +489,28 @@ body.light-mode nav.fixed, body.light-mode .navbar,
 body.light-mode nav, body.light-mode .navbar .nav-drawer-container .nav-drawer,
 body.light-mode nav .nav-drawer-container .nav-drawer, .navbar .nav-drawer-container body.light-mode .nav-drawer,
 nav .nav-drawer-container body.light-mode .nav-drawer {
+    color: var(--onSurfaceColor--);
     background-color: var(--surfaceColor--);
     background-image: var(--backgroundImage--);
   }
   body.dark-mode {
-    --primaryColor--: #00a1e4;
+    --primaryColor--: #28878a;
     --onPrimaryColor--: #222222;
-    --primaryColorVariant--: #32c3ff;
+    --primaryColorVariant--: #0e80cc;
     --secondaryColor--: #008080;
     --onSecondaryColor--: #ffffff;
     --secondaryColorVariant--: #003434;
-    --surfaceColor--: linear-gradient(#032035, #032035);
+    --surfaceColor--: #080808;
     --onSurfaceColor--: rgba(241, 241, 241, 0.937254902);
     --errorColor--: #ff3d61;
     --onErrorColor--: rgba(255, 255, 255, 0.937254902);
     --successColor--: rgba(63, 248, 63, 0.8705882353);
     --onSuccessColor--: rgba(241, 241, 241, 0.9450980392);
-    --backgroundImage--: linear-gradient(to left top, #031627, #04192a, #041b2d, #031d31, #032034, #032035, #022136, #022137, #021f35, #021c34, #021a32, #031730);
-    --backgroundColor--: #031627;
-    --onBackgroundColor--: #d8d8d8;
+    --backgroundImage--: none;
+    --backgroundColor--: #000000;
+    --onBackgroundColor--: #d6d9db;
+    --onBackgroundColorDark--: #71767B;
+    --onBackgroundColorLight--: #E7E9EA;
     color: var(--onBackgroundColor--);
     background-image: var(--backgroundImage--);
     background-color: var(--backgroundColor--);
@@ -590,21 +544,7 @@ nav .nav-drawer-container .nav-drawer .nav-drawer-items body.dark-mode .item.act
 body.dark-mode .card .card-links a,
 .card .card-links body.dark-mode a, body.dark-mode .flat-card .card-links .link, .flat-card .card-links body.dark-mode .link,
 body.dark-mode .flat-card .card-links a,
-.flat-card .card-links body.dark-mode a, body.dark-mode .navbar .nav-links a svg:hover,
-body.dark-mode nav .nav-links a svg:hover, .navbar .nav-links a body.dark-mode svg:hover,
-nav .nav-links a body.dark-mode svg:hover,
-body.dark-mode .navbar .nav-links .link svg:hover,
-body.dark-mode nav .nav-links .link svg:hover,
-.navbar .nav-links .link body.dark-mode svg:hover,
-nav .nav-links .link body.dark-mode svg:hover, body.dark-mode .navbar .nav-links a:hover,
-body.dark-mode nav .nav-links a:hover, .navbar .nav-links body.dark-mode a:hover,
-nav .nav-links body.dark-mode a:hover,
-body.dark-mode .navbar .nav-links .link:hover,
-body.dark-mode nav .nav-links .link:hover,
-.navbar .nav-links body.dark-mode .link:hover,
-nav .nav-links body.dark-mode .link:hover, body.dark-mode .navbar .nav-drawer-toggler:active,
-body.dark-mode nav .nav-drawer-toggler:active, .navbar body.dark-mode .nav-drawer-toggler:active,
-nav body.dark-mode .nav-drawer-toggler:active {
+.flat-card .card-links body.dark-mode a {
     color: var(--primaryColorVariant--);
     fill: var(--primaryColorVariant--);
   }
@@ -622,6 +562,7 @@ body.dark-mode nav.fixed, body.dark-mode .navbar,
 body.dark-mode nav, body.dark-mode .navbar .nav-drawer-container .nav-drawer,
 body.dark-mode nav .nav-drawer-container .nav-drawer, .navbar .nav-drawer-container body.dark-mode .nav-drawer,
 nav .nav-drawer-container body.dark-mode .nav-drawer {
+    color: var(--onSurfaceColor--);
     background-color: var(--surfaceColor--);
     background-image: var(--backgroundImage--);
   }
@@ -669,6 +610,7 @@ h6 {
     letter-spacing: 1px;
     overflow-wrap: break-word;
     font-weight: normal;
+    color: var(--onBackgroundColorLight--);
   }
   p {
     overflow-wrap: break-word;
@@ -684,6 +626,11 @@ h6 {
     padding: 0 10px;
     box-sizing: border-box;
   }
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 1px;
+    }
+  }
   .row {
     display: flex;
     flex-flow: row wrap;
@@ -694,11 +641,17 @@ h6 {
   .row.gap-1 > * {
     padding: 0 0.5rem;
   }
+  .gap-1 > * {
+    gap: "0.5rem";
+  }
   .row.gap-2 {
     margin: 0 -0.3rem;
   }
   .row.gap-2 > * {
     padding: 0 1rem;
+  }
+  .gap-2 > * {
+    gap: "1rem";
   }
   .row.gap-3 {
     margin: 0 -0.3rem;
@@ -706,17 +659,26 @@ h6 {
   .row.gap-3 > * {
     padding: 0 1.5rem;
   }
+  .gap-3 > * {
+    gap: "1.5rem";
+  }
   .row.gap-4 {
     margin: 0 -0.3rem;
   }
   .row.gap-4 > * {
     padding: 0 2rem;
   }
+  .gap-4 > * {
+    gap: "2rem";
+  }
   .row.gap-5 {
     margin: 0 -0.3rem;
   }
   .row.gap-5 > * {
     padding: 0 2.5rem;
+  }
+  .gap-5 > * {
+    gap: "2.5rem";
   }
   @media (min-width: 0) {
     .col-1-xs {
@@ -1020,24 +982,24 @@ h6 {
   }
 }
 @layer component {
-  .navbar.fixed .nav-drawer-toggler,
-nav.fixed .nav-drawer-toggler, .navbar .nav-drawer-toggler,
+  .navbar .nav-drawer-toggler,
 nav .nav-drawer-toggler {
-    top: 0;
-    height: 100%;
+    min-height: 100%;
+    min-width: 25px;
     display: none;
-    cursor: pointer;
-    position: absolute;
     align-items: center;
-    padding: var(--basePadding--);
-    right: calc(var(--basePadding--) * 2.5);
-    margin-right: calc(var(--baseMargin--) * 0.15);
+    justify-content: center;
+    order: -1;
+    cursor: pointer;
   }
-  .navbar.fixed .nav-drawer-toggler svg,
-nav.fixed .nav-drawer-toggler svg, .navbar .nav-drawer-toggler svg,
+  .navbar .nav-drawer-toggler svg,
 nav .nav-drawer-toggler svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 25px;
+    height: 25px;
+  }
+  .navbar .nav-drawer-toggler svg:hover,
+nav .nav-drawer-toggler svg:hover {
+    fill: var(--onBackgroundColorLight--);
   }
   .navbar.fixed .nav-drawer-container,
 nav.fixed .nav-drawer-container, .navbar .nav-drawer-container,
@@ -1130,51 +1092,46 @@ nav {
 nav.fixed, .navbar,
 nav {
     width: 100%;
-    height: 65px;
+    height: var(--nav-height);
     position: relative;
     padding: 0 var(--basePadding--);
-    background-color: var(--surfaceColor--);
+    background-color: var(--backgroundColor--);
     box-shadow: var(--navbarBoxShadow--);
-    z-index: 1;
   }
   nav.fixed .container, .navbar .container,
 nav .container {
     height: 100%;
   }
-  .navbar .brands,
-nav .brands,
-.navbar .nav-brand,
+  .navbar .nav-brand,
 nav .nav-brand {
     cursor: pointer;
     margin-right: 0.5rem;
-    font-size: calc(var(--baseFontSize--) * 200);
-  }
-  @media (max-width: 720px) {
-    .navbar .brands,
-nav .brands,
-.navbar .nav-brand,
-nav .nav-brand {
-      font-size: calc(var(--baseFontSize--) * 1.8);
-    }
-  }
-  @media (max-width: 300px) {
-    .navbar .brands,
-nav .brands,
-.navbar .nav-brand,
-nav .nav-brand {
-      font-size: calc(var(--baseFontSize--) * 1.8);
-    }
+    font-size: calc(var(--baseFontSize--) * 1.5);
   }
   .navbar .nav-search,
 nav .nav-search {
-    flex: 0.7;
+    display: flex;
+    gap: calc(var(--baseFontSize--) * 0.5);
+    justify-content: right;
+    align-items: center;
+    flex: 0.75;
   }
   .navbar .nav-search input,
 nav .nav-search input {
     max-width: 100%;
   }
-  .navbar.fixed .nav-links,
-nav.fixed .nav-links, .navbar .nav-links,
+  .navbar .nav-search .search-bar-toggler,
+nav .nav-search .search-bar-toggler {
+    display: none;
+  }
+  .navbar .nav-search .search-bar-toggler svg,
+nav .nav-search .search-bar-toggler svg {
+    cursor: pointer;
+    width: calc(var(--baseFontSize--) * 1.3);
+    height: calc(var(--baseFontSize--) * 1.3);
+    font-weight: lighter;
+  }
+  nav.fixed .nav-links, .navbar .nav-links,
 nav .nav-links {
     display: flex;
     justify-content: space-between;
@@ -1182,92 +1139,82 @@ nav .nav-links {
     height: 100%;
     gap: var(--baseFontSize--);
   }
-  .navbar.fixed .nav-links a,
-nav.fixed .nav-links a, .navbar .nav-links a,
-nav .nav-links a,
-.navbar.fixed .nav-links .link,
+  nav.fixed .nav-links > *, .navbar .nav-links > *,
+nav .nav-links > *,
 nav.fixed .nav-links .link,
 .navbar .nav-links .link,
-nav .nav-links .link,
-.navbar.fixed .nav-links .link a,
-nav.fixed .nav-links .link a,
-.navbar .nav-links .link a,
-nav .nav-links .link a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+nav .nav-links .link {
     cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word;
+    transition: color 200ms ease;
   }
-  nav.fixed .nav-links a:hover, .navbar .nav-links a:hover,
-nav .nav-links a:hover,
-nav.fixed .nav-links .link:hover,
+  .navbar .nav-links > :hover,
+nav .nav-links > :hover,
 .navbar .nav-links .link:hover,
-nav .nav-links .link:hover,
-nav.fixed .nav-links .link a:hover,
-.navbar .nav-links .link a:hover,
-nav .nav-links .link a:hover {
-    transform: scale(1.1);
+nav .nav-links .link:hover {
+    color: var(--primaryColor--);
   }
-  .navbar.fixed .nav-links a svg,
-nav.fixed .nav-links a svg, .navbar .nav-links a svg,
-nav .nav-links a svg,
-.navbar.fixed .nav-links .link svg,
+  nav.fixed .nav-links > * svg, .navbar .nav-links > * svg,
+nav .nav-links > * svg,
 nav.fixed .nav-links .link svg,
 .navbar .nav-links .link svg,
-nav .nav-links .link svg,
-nav.fixed .nav-links .link a svg,
-.navbar .nav-links .link a svg,
-nav .nav-links .link a svg {
-    transition: fill 0.3s ease-in-out;
-    width: 1.5rem;
-    height: 1.5rem;
+nav .nav-links .link svg {
+    transition: fill 200ms ease-in-out;
+    margin: 0 calc(var(--baseFontSize--) * 0.5);
+    width: calc(var(--baseFontSize--) * 1.5);
+    height: calc(var(--baseFontSize--) * 1.5);
   }
-  nav.fixed .nav-links a svg:hover, .navbar .nav-links a svg:hover,
-nav .nav-links a svg:hover,
-nav.fixed .nav-links .link svg:hover,
+  .navbar .nav-links > * svg:hover,
+nav .nav-links > * svg:hover,
 .navbar .nav-links .link svg:hover,
-nav .nav-links .link svg:hover,
-nav .nav-links .link a svg:hover {
-    transform: scale(1.1);
+nav .nav-links .link svg:hover {
+    fill: var(--profileColor--);
+  }
+  .navbar .nav-links > .active,
+nav .nav-links > .active,
+.navbar .nav-links .active.link,
+nav .nav-links .active.link {
+    color: var(--primaryColor--);
   }
   .navbar .nav-profile,
 nav .nav-profile {
     cursor: pointer;
-    border: 1px solid var(--textMutedColor--);
-    height: 100%;
-    width: fit-content;
     display: flex;
-    align-items: center;
-    padding: var(--basePadding--);
+    justify-content: center;
   }
   .navbar .nav-profile img,
 nav .nav-profile img {
-    aspect-ratio: 1;
+    max-width: 45px;
+    max-height: 45px;
+    align-self: center;
+    outline: 1px solid var(--neutralTextMutedColor--);
     width: 45px;
     height: 45px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 100%;
     overflow: hidden;
   }
   @media (max-width: 840px) {
-    .navbar.fixed,
-nav.fixed, .navbar,
+    .navbar,
 nav {
       justify-content: flex-start;
       gap: calc(var(--baseFontSize--) * 2.5);
     }
+    .navbar .container,
+nav .container {
+      justify-content: flex-start;
+      gap: calc(var(--baseFontSize--) * 2.5);
+    }
+    .navbar .nav-search,
+nav .nav-search {
+      flex-grow: 0.9;
+    }
     .navbar .nav-links,
 nav .nav-links {
       display: none;
-    }
-    .navbar .nav-profile,
-nav .nav-profile {
-      position: absolute;
-      top: 0;
-      right: 0;
     }
     .navbar .nav-drawer-toggler,
 nav .nav-drawer-toggler {
@@ -1275,40 +1222,62 @@ nav .nav-drawer-toggler {
     }
   }
   @media (max-width: 600px) {
+    .navbar,
+nav {
+      gap: calc(var(--baseFontSize--) * 1.5);
+    }
+    .navbar .container,
+nav .container {
+      gap: calc(var(--baseFontSize--) * 1.5);
+    }
     .navbar .nav-drawer,
 nav .nav-drawer {
       width: 85vw;
     }
+    .navbar .nav-profile img,
+nav .nav-profile img {
+      width: 35px;
+      height: 35px;
+    }
+    .navbar .nav-search,
+nav .nav-search {
+      flex-grow: 1;
+    }
+    .navbar .nav-brand,
+nav .nav-brand {
+      font-size: var(--baseFontSize--);
+    }
   }
   @media (max-width: 480px) {
-    .navbar .nav-search,
-nav .nav-search {
-      flex: 0.8;
+    .navbar,
+nav {
+      padding: 0 calc(var(--basePadding--) * 0.5);
+      justify-content: space-between;
+      gap: calc(var(--baseFontSize--) * 1);
     }
-    .navbar .nav-profile,
-nav .nav-profile {
-      position: absolute;
-      top: 0;
-      right: 0;
+    .navbar .nav-brand,
+nav .nav-brand {
+      font-size: calc(var(--baseFontSize--) * 1.5);
+    }
+    .navbar .container,
+nav .container {
+      justify-content: space-between;
+      gap: calc(var(--baseFontSize--) * 1);
+    }
+    .navbar .nav-search input,
+nav .nav-search input {
+      width: 0px;
       display: none;
+      transition: width 250ms ease-in;
     }
-    .navbar .nav-drawer-toggler,
-nav .nav-drawer-toggler {
-      right: 0;
+    .navbar .nav-search input.active,
+nav .nav-search input.active {
+      display: inline;
+      width: 100%;
     }
-  }
-  @media (max-width: 430px) {
-    .navbar .nav-search,
-nav .nav-search {
-      display: none;
-    }
-    .navbar .nav-profile,
-nav .nav-profile {
-      display: flex;
-    }
-    .navbar .nav-drawer-toggler,
-nav .nav-drawer-toggler {
-      right: calc(var(--basePadding--) * 2.5);
+    .navbar .nav-search .search-bar-toggler,
+nav .nav-search .search-bar-toggler {
+      display: inline-block;
     }
   }
   .navbar.fixed,
@@ -1316,12 +1285,97 @@ nav.fixed {
     top: 0;
     left: 0;
     position: fixed;
+    z-index: 100;
   }
-  nav + * {
-    margin-top: 5px;
+  @media (max-width: 840px) {
+    .navbar.fixed,
+nav.fixed {
+      justify-content: flex-start;
+      gap: calc(var(--baseFontSize--) * 2.5);
+    }
+    .navbar.fixed .container,
+nav.fixed .container {
+      justify-content: flex-start;
+      gap: calc(var(--baseFontSize--) * 2.5);
+    }
+    .navbar.fixed .nav-search,
+nav.fixed .nav-search {
+      flex-grow: 0.9;
+    }
+    .navbar.fixed .nav-links,
+nav.fixed .nav-links {
+      display: none;
+    }
+    .navbar.fixed .nav-drawer-toggler,
+nav.fixed .nav-drawer-toggler {
+      display: flex;
+    }
+  }
+  @media (max-width: 600px) {
+    .navbar.fixed,
+nav.fixed {
+      gap: calc(var(--baseFontSize--) * 1.5);
+    }
+    .navbar.fixed .container,
+nav.fixed .container {
+      gap: calc(var(--baseFontSize--) * 1.5);
+    }
+    .navbar.fixed .nav-drawer,
+nav.fixed .nav-drawer {
+      width: 85vw;
+    }
+    .navbar.fixed .nav-profile img,
+nav.fixed .nav-profile img {
+      width: 35px;
+      height: 35px;
+    }
+    .navbar.fixed .nav-search,
+nav.fixed .nav-search {
+      flex-grow: 1;
+    }
+    .navbar.fixed .nav-brand,
+nav.fixed .nav-brand {
+      font-size: var(--baseFontSize--);
+    }
+  }
+  @media (max-width: 480px) {
+    .navbar.fixed,
+nav.fixed {
+      padding: 0 calc(var(--basePadding--) * 0.5);
+      justify-content: space-between;
+      gap: calc(var(--baseFontSize--) * 1);
+    }
+    .navbar.fixed .nav-brand,
+nav.fixed .nav-brand {
+      font-size: calc(var(--baseFontSize--) * 1.5);
+    }
+    .navbar.fixed .container,
+nav.fixed .container {
+      justify-content: space-between;
+      gap: calc(var(--baseFontSize--) * 1);
+    }
+    .navbar.fixed .nav-search input,
+nav.fixed .nav-search input {
+      width: 0px;
+      display: none;
+      transition: width 250ms ease-in;
+    }
+    .navbar.fixed .nav-search input.active,
+nav.fixed .nav-search input.active {
+      display: inline;
+      width: 100%;
+    }
+    .navbar.fixed .nav-search .search-bar-toggler,
+nav.fixed .nav-search .search-bar-toggler {
+      display: inline-block;
+    }
+  }
+  .nabar + *,
+nav + * {
+    margin-top: calc(var(--nav-height) - 65px);
   }
   nav.fixed + * {
-    margin-top: 70px;
+    margin-top: calc(var(--nav-height) + 5px);
   }
   .dropdown-trigger {
     position: relative;
@@ -2306,16 +2360,16 @@ input[type=text] {
     padding: calc(var(--basePadding--) * 0.5);
     border-radius: calc(var(--baseBorderRadius--) * 0.3);
     border: 1px solid var(--neutralTextMutedColor--);
-    background-color: transparent;
+    background-color: var(--surfaceColor--);
     line-height: 1rem;
   }
-  textarea,
-input[type=number]::after,
-input[type=password]::after,
-input[type=email]::after,
-input[type=url]::after,
-input[type=search]::after,
-input[type=text]::after {
+  textarea:active,
+input[type=number]:active,
+input[type=password]:active,
+input[type=email]:active,
+input[type=url]:active,
+input[type=search]:active,
+input[type=text]:active {
     border: 1px solid var(--primaryColorVariant--);
     box-shadow: 0 0 0 1px var(--primaryColorVariant--);
   }
@@ -2363,8 +2417,6 @@ input[type=text]::after {
   }
   svg {
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
     fill: currentColor;
   }
   .icon-wrapper {
@@ -2633,22 +2685,22 @@ input[type=text]::after {
     border-radius: 50%;
   }
   .font-xs {
-    font-size: calc(var(--baseFontSize--) * 0.35);
+    font-size: calc(var(--baseFontSize--) * 0.45);
   }
   .font-sm {
-    font-size: calc(var(--baseFontSize--) * 0.65);
+    font-size: calc(var(--baseFontSize--) * 0.7);
   }
   .font-md {
     font-size: var(--baseFontSize--);
   }
   .font-lg {
-    font-size: calc(var(--baseFontSize--) * 2);
+    font-size: calc(var(--baseFontSize--) * 1.5);
   }
   .font-xl {
-    font-size: calc(var(--baseFontSize--) * 2.8);
+    font-size: calc(var(--baseFontSize--) * 2.2);
   }
   .font-xxl {
-    font-size: calc(var(--baseFontSize--) * 3.3);
+    font-size: calc(var(--baseFontSize--) * 3.5);
   }
   .gap-1-px {
     gap: 5px;

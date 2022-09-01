@@ -41,16 +41,16 @@ input[type='text'] {
 	padding: calc(var(--basePadding--) * 0.5);
 	border-radius: calc(var(--baseBorderRadius--) * 0.3);
 	border: 1px solid var(--neutralTextMutedColor--);
-	background-color: transparent;
+	background-color: var(--surfaceColor--);
 	line-height: 1rem;
 }
-textarea,
-input[type='number']::after,
-input[type='password']::after,
-input[type='email']::after,
-input[type='url']::after,
-input[type='search']::after,
-input[type='text']::after {
+textarea:active,
+input[type='number']:active,
+input[type='password']:active,
+input[type='email']:active,
+input[type='url']:active,
+input[type='search']:active,
+input[type='text']:active {
 	// border: 1px solid;
 	border: 1px solid var(--primaryColorVariant--);
 	box-shadow: 0 0 0 1px var(--primaryColorVariant--);

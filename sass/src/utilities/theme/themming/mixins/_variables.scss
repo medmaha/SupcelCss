@@ -63,6 +63,14 @@
 		$map: $palette,
 		$key: onBackgroundColor,
 	);
+	$onBackgroundColorDark: map-get(
+		$map: $palette,
+		$key: onBackgroundColorDark,
+	);
+	$onBackgroundColorLight: map-get(
+		$map: $palette,
+		$key: onBackgroundColorLight,
+	);
 
 	--primaryColor--: #{$primaryColor};
 	--onPrimaryColor--: #{$onPrimaryColor};
@@ -84,6 +92,8 @@
 	--backgroundImage--: #{$backgroundImage};
 	--backgroundColor--: #{$backgroundColor};
 	--onBackgroundColor--: #{$onBackgroundColor};
+	--onBackgroundColorDark--: #{$onBackgroundColorDark};
+	--onBackgroundColorLight--: #{$onBackgroundColorLight};
 
 	color: var(--onBackgroundColor--);
 	background-image: var(--backgroundImage--);

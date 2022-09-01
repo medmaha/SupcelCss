@@ -46,6 +46,27 @@ class NavigationAndDrawer {
 		})
 	}
 }
+class NavSearchBarToggling {
+	constructor() {
+		this.navSearch = document.querySelector('nav .nav-search')
+		this.searchBar = document.querySelector('nav .nav-search input')
+		this.searchIcon = document.querySelector('nav .nav-search .search-bar-toggler')
+	}
+
+ 	init(icon){
+		if (!this.searchIcon) return
+		this.searchIcon.addEventListener('click', this.toggleSearchBar)
+	}
+
+	toggleSearchBar() {
+		const navBrand = document.querySelector('nav .nav-brand')
+		const searchBar = document.querySelector('nav .nav-search input')
+		
+		navBrand.classList.toggle('hide')
+		searchBar.classList.toggle('active')
+
+	}
+}
 
 class BaseDropdown {
 	init(
@@ -192,10 +213,12 @@ class BasePopup {
 	}
 }
 
-class Supcel {
+class SP {
 	constructor() {
-		this.Dropdown = this.newDropdown()
-		this.Dialog = this.newDialog()
+		this.Dropdown = this.newDropdown
+		this.Dialog = this.newDialog
+		this.Popup = this.newPopop
+		this.SearchBarToggler = this.newNavSearchBarToggler
 	}
 
 	newDialog() {
@@ -204,6 +227,14 @@ class Supcel {
 	newDropdown() {
 		return new BaseDropdown()
 	}
+	newPopop() {
+		return new BasePopup()
+	}
+
+	newNavSearchBarToggler() {
+		return new NavSearchBarToggling()
+	}
 }
 
-const SP = new Supcel()
+const Supcel = new SP()
+export default Supcel

@@ -14,12 +14,16 @@ $gaps-sizes: (
 	margin: 0 auto;
 	padding: 0 10px;
 	box-sizing: border-box;
+	@media (max-width: 480px){
+		padding:  0 1px;
+	}
 }
 
 .row {
 	display: flex;
 	flex-flow: row wrap;
 }
+
 
 @for $idx from 1 through 5 {
 	$gap: $idx * 0.5;
@@ -28,6 +32,10 @@ $gaps-sizes: (
 	}
 	.row.gap-#{$idx} > * {
 		padding: 0 $base-padding * $gap;
+	}
+
+	.gap-#{$idx} > *{
+		gap: $gap+'rem'
 	}
 }
 //

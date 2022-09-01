@@ -40,6 +40,7 @@
 		@extend %flatSurfaceCard;
 	}
 	%flatSurfaceCard {
+		color: var(--onSurfaceColor--);
 		background-color: var(--surfaceColor--);
 		background-image: var(--backgroundImage--);
 	}
